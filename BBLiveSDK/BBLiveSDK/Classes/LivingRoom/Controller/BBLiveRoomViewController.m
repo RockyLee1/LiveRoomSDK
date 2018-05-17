@@ -7,24 +7,29 @@
 //
 
 #import "BBLiveRoomViewController.h"
-#import <PLPlayerKit/PLPlayerKit.h>
 
 #import "BBLiveRoomTopViewController.h"
 #import "BBLiveRoomBottomViewController.h"
 
 #import <Masonry/Masonry.h>
+#import <libextobjc/EXTScope.h>
+
+#import "BBLiveListRoomInfoModel.h"
+#import "BBLivePlayer.h"
 
 @interface BBLiveRoomViewController ()
 
+// UI
 @property (weak, nonatomic) IBOutlet UIView *playerContentView;
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *topContentView;
 @property (weak, nonatomic) IBOutlet UIView *bottomContentView;
 
-@property (strong, nonatomic) PLPlayer *player;
-
 @property (strong, nonatomic) BBLiveRoomTopViewController *topViewController;
 @property (strong, nonatomic) BBLiveRoomBottomViewController *bottomViewController;
+
+// DATA
+@property (strong, nonatomic) BBLivePlayer *livePlayer;
 
 @end
 
@@ -49,39 +54,30 @@
     [super viewDidLoad];
     
     [self.liveUserRoom enterLiveUserRoom];
+    @weakify(self)
     [self.liveUserRoom setEnterLiveRoomCompleteBlock:^{
+        @strongify(self)
+        
+        [self.topViewController refreshTopViewWithLiveRoomDetailInfoModel:self.liveUserRoom.roomDetailInfo];
         
     }];
     
-    PLPlayerOption *playerOption = [PLPlayerOption defaultOption];
+    [self.liveUserRoom setLiveRoomAudienceRequestCompleteBlock:^{
+        
+    }];
     
-    NSString *url = self.livingRoomURLString;
-    
-    self.player = [PLPlayer playerLiveWithURL:[NSURL URLWithString:url]
-                                       option:playerOption];
-    self.player.playerView.contentMode = UIViewContentModeScaleAspectFit;
-    self.player.playerView.frame = [UIScreen mainScreen].bounds;
-    [self.player play];
-    
-    [self.playerContentView addSubview:self.player.playerView];
-    
-    
-    
+    //
+    self.livePlayer = [BBLivePlayer livePlayerWithUrl:self.liveUserRoom.roomInfo.livingURL
+                                    playerContentView:self.playerContentView];
+    [self.livePlayer play];
     
     [self.topContentView addSubview:self.topViewController.view];
-    
-    
-    
-    
-    
-    
     
     //
     [self.bottomContentView addSubview:self.bottomViewController.view];
     [self.bottomViewController.view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(@0);
     }];
-    
 }
 
 - (BBLiveRoomTopViewController *)topViewController
@@ -111,21 +107,6 @@
 {
     [super viewDidAppear:animated];
     
-    
-}
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
-- (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event
-{
     
 }
 

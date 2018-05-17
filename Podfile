@@ -39,6 +39,7 @@ target 'BBLiveSDK' do
    pod 'MJExtension', '~> 3.0.13'
    pod 'SDWebImage', '~> 4.3.3'
    pod 'Masonry', '~> 1.1.0'
+   pod 'libextobjc/EXTScope', '~> 0.4.1'
 
 
    

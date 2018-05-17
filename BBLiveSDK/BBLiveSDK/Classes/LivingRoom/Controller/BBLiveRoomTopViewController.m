@@ -7,21 +7,42 @@
 //
 
 #import "BBLiveRoomTopViewController.h"
+#import "BBLiveRoomDetailInfoModel.h"
+
+#import <SDWebImage/UIImageView+WebCache.h>
 
 @interface BBLiveRoomTopViewController ()
+
+@property (weak, nonatomic) IBOutlet UIImageView *anchorAvatarImageView;
+@property (weak, nonatomic) IBOutlet UILabel *anchorNameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *experienceLabel;
+@property (weak, nonatomic) IBOutlet UIButton *attentionBtn;
+
+@property (weak, nonatomic) IBOutlet UIImageView *hotIconImageView;
+@property (weak, nonatomic) IBOutlet UILabel *hotValueLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *charmValueLabel;
 
 @end
 
 @implementation BBLiveRoomTopViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view from its nib.
+    
 }
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)refreshTopViewWithLiveRoomDetailInfoModel:(BBLiveRoomDetailInfoModel *)model
+{
+    self.anchorNameLabel.text = model.anchorNikeName;
+    [self.anchorAvatarImageView sd_setImageWithURL:[NSURL URLWithString:model.anchorHeadImg]];
+    
 }
 
 /*

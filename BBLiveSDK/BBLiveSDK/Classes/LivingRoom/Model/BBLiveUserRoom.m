@@ -8,14 +8,18 @@
 
 #import "BBLiveUserRoom.h"
 #import "BBLiveListRoomInfoModel.h"
+#import "BBLiveRoomDetailInfoModel.h"
 #import "BBLiveUserEnterRoomRequest.h"
+#import "BBLiveRoomAudienceListRequest.h"
 
 #import <AFNetworking/AFNetworking.h>
 #import <RongIMLib/RCIMClient.h>
+#import <libextobjc/EXTScope.h>
 
 @interface BBLiveUserRoom ()
 
 @property (nonatomic, strong) BBLiveUserEnterRoomRequest *enterRoomRequest;
+@property (nonatomic, strong) BBLiveRoomAudienceListRequest *audienceListRequest;
 
 @end
 
@@ -30,15 +34,36 @@
 {
     self.enterRoomRequest = [[BBLiveUserEnterRoomRequest alloc] init];
     self.enterRoomRequest.roomId = roomInfo.roomId;
-    [self.enterRoomRequest startRequestWithCompleteBlockWithSuccess:^(__kindof BBLiveBaseRequest *request) {
+    
+    @weakify(self)
+    [self.enterRoomRequest startEnterRoomRequestWithSuccessBlock:^(BBLiveRoomDetailInfoModel *detailInfoModel) {
+        @strongify(self)
         
-    } failure:^(__kindof BBLiveBaseRequest *request) {
+        self.roomDetailInfo = detailInfoModel;
         
+        dispatch_async(dispatch_get_main_queue(), ^{
+            if (self.enterLiveRoomCompleteBlock) {
+                self.enterLiveRoomCompleteBlock();
+            }
+        });
+        
+        // 请求观众列表
+        self.audienceListRequest = [[BBLiveRoomAudienceListRequest alloc] init];
+        self.audienceListRequest.anchorUid = self.roomDetailInfo.anchorUid;
+        [self.audienceListRequest startRequestWithCompleteBlockWithSuccess:^(__kindof BBLiveBaseRequest *request) {
+            @strongify(self)
+            
+            dispatch_async(dispatch_get_main_queue(), ^{
+                if (self.liveRoomAudienceRequestCompleteBlock) {
+                    self.liveRoomAudienceRequestCompleteBlock();
+                }
+            });
+        } failure:^(__kindof BBLiveBaseRequest *request) {
+            
+        }];
+    } failureBlock:^(NSError *error) {
+
     }];
-    
-    
-    //1 获取房间主播信息
-    
     
     // 融云进房间
     [[RCIMClient sharedRCIMClient] joinChatRoom:@""
@@ -48,7 +73,6 @@
                                         } error:^(RCErrorCode status) {
                                             
                                         }];
-    
 }
 
 

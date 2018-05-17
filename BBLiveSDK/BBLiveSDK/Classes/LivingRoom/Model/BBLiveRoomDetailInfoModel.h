@@ -18,10 +18,25 @@ typedef NS_ENUM(NSInteger, BBLiveUserSex) {
 
 @interface BBLiveRoomDetailInfoModel : NSObject
 
-@property (nonatomic, assign) BOOL isFollow;
+// 主播基本信息
 @property (nonatomic, strong) NSString *anchorNikeName;
 @property (nonatomic, assign) BBLiveUserSex anchorSex;
-@property (nonatomic, assign) NSInteger creditTotal;
+@property (nonatomic, strong) NSString *anchorHeadImg;
+@property (nonatomic, assign) NSInteger anchorUid;
+@property (nonatomic, assign) NSInteger creditTotal; // 主播魅力值
+@property (nonatomic, assign) NSInteger anchorEx;
+@property (nonatomic, assign) NSInteger anchorNextEx;
+@property (nonatomic, assign) NSInteger anchorLevel;
+@property (nonatomic, assign) NSInteger ranking;
+
+// 用户基本信息
+@property (nonatomic, assign) NSInteger uid;
+@property (nonatomic, assign) BOOL isFollow;
+@property (nonatomic, assign) NSInteger userLevel;
+@property (nonatomic, assign) BOOL roomManage;
+@property (nonatomic, assign) NSInteger carId;
+
+
 
 //anchorEx = 2435610;
 //anchorHeadImg = "http://out8i00tg.bkt.clouddn.com/FufJOybv6-0m2Rkky0A0xCx_Gc-H?imageMogr2/thumbnail/250x250&v=1524623294";

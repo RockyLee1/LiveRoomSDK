@@ -26,11 +26,15 @@
 		954354D020AC38A000774A04 /* BBLiveRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 958BED3220A16B6F00508ECB /* BBLiveRoomViewController.xib */; };
 		954354D120AC38A900774A04 /* BBLiveRoomTopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9585FC6920A59AA20023D484 /* BBLiveRoomTopViewController.xib */; };
 		954354D220AC38AE00774A04 /* BBLiveRoomBottomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9585FCCA20A91F920023D484 /* BBLiveRoomBottomViewController.xib */; };
-		954354D520AC420600774A04 /* lingdang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 954354D320AC420600774A04 /* lingdang@2x.png */; };
-		954354D620AC420600774A04 /* lingdang@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 954354D420AC420600774A04 /* lingdang@3x.png */; };
 		954354DD20AC442600774A04 /* BBLiveSDKResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 954354C520AC26C600774A04 /* BBLiveSDKResource.bundle */; };
 		954354E120AD10DA00774A04 /* UIImage+LoadSDKResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 954354DF20AD10DA00774A04 /* UIImage+LoadSDKResource.h */; };
 		954354E220AD10DA00774A04 /* UIImage+LoadSDKResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 954354E020AD10DA00774A04 /* UIImage+LoadSDKResource.m */; };
+		954354E520AD1BFB00774A04 /* BBLivePlayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 954354E320AD1BFB00774A04 /* BBLivePlayer.h */; };
+		954354E620AD1BFB00774A04 /* BBLivePlayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 954354E420AD1BFB00774A04 /* BBLivePlayer.m */; };
+		954354F220AD758100774A04 /* BBLiveRoomAudienceListRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 954354F020AD758100774A04 /* BBLiveRoomAudienceListRequest.h */; };
+		954354F320AD758100774A04 /* BBLiveRoomAudienceListRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 954354F120AD758100774A04 /* BBLiveRoomAudienceListRequest.m */; };
+		954354F620AD76FE00774A04 /* BBLiveAudienceModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 954354F420AD76FE00774A04 /* BBLiveAudienceModel.h */; };
+		954354F720AD76FE00774A04 /* BBLiveAudienceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 954354F520AD76FE00774A04 /* BBLiveAudienceModel.m */; };
 		9585FC6A20A59AA20023D484 /* BBLiveRoomTopViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9585FC6720A59AA20023D484 /* BBLiveRoomTopViewController.h */; };
 		9585FC6B20A59AA20023D484 /* BBLiveRoomTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585FC6820A59AA20023D484 /* BBLiveRoomTopViewController.m */; };
 		9585FCCB20A91F920023D484 /* BBLiveRoomBottomViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9585FCC820A91F920023D484 /* BBLiveRoomBottomViewController.h */; };
@@ -83,10 +87,14 @@
 		954354C520AC26C600774A04 /* BBLiveSDKResource.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBLiveSDKResource.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		954354C720AC26C600774A04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		954354CD20AC28AF00774A04 /* Resource.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resource.xcassets; sourceTree = "<group>"; };
-		954354D320AC420600774A04 /* lingdang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lingdang@2x.png"; sourceTree = "<group>"; };
-		954354D420AC420600774A04 /* lingdang@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lingdang@3x.png"; sourceTree = "<group>"; };
 		954354DF20AD10DA00774A04 /* UIImage+LoadSDKResource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+LoadSDKResource.h"; sourceTree = "<group>"; };
 		954354E020AD10DA00774A04 /* UIImage+LoadSDKResource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LoadSDKResource.m"; sourceTree = "<group>"; };
+		954354E320AD1BFB00774A04 /* BBLivePlayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBLivePlayer.h; sourceTree = "<group>"; };
+		954354E420AD1BFB00774A04 /* BBLivePlayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLivePlayer.m; sourceTree = "<group>"; };
+		954354F020AD758100774A04 /* BBLiveRoomAudienceListRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBLiveRoomAudienceListRequest.h; sourceTree = "<group>"; };
+		954354F120AD758100774A04 /* BBLiveRoomAudienceListRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLiveRoomAudienceListRequest.m; sourceTree = "<group>"; };
+		954354F420AD76FE00774A04 /* BBLiveAudienceModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBLiveAudienceModel.h; sourceTree = "<group>"; };
+		954354F520AD76FE00774A04 /* BBLiveAudienceModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLiveAudienceModel.m; sourceTree = "<group>"; };
 		9585FC6720A59AA20023D484 /* BBLiveRoomTopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBLiveRoomTopViewController.h; sourceTree = "<group>"; };
 		9585FC6820A59AA20023D484 /* BBLiveRoomTopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLiveRoomTopViewController.m; sourceTree = "<group>"; };
 		9585FC6920A59AA20023D484 /* BBLiveRoomTopViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBLiveRoomTopViewController.xib; sourceTree = "<group>"; };
@@ -193,8 +201,6 @@
 		954354C620AC26C600774A04 /* BBLiveSDKResource */ = {
 			isa = PBXGroup;
 			children = (
-				954354D320AC420600774A04 /* lingdang@2x.png */,
-				954354D420AC420600774A04 /* lingdang@3x.png */,
 				954354C720AC26C600774A04 /* Info.plist */,
 				954354CD20AC28AF00774A04 /* Resource.xcassets */,
 			);
@@ -252,12 +258,18 @@
 			children = (
 				959F098720ABFD8900387069 /* BBLiveUserEnterRoomRequest.h */,
 				959F098820ABFD8900387069 /* BBLiveUserEnterRoomRequest.m */,
+				954354F020AD758100774A04 /* BBLiveRoomAudienceListRequest.h */,
+				954354F120AD758100774A04 /* BBLiveRoomAudienceListRequest.m */,
+				954354F420AD76FE00774A04 /* BBLiveAudienceModel.h */,
+				954354F520AD76FE00774A04 /* BBLiveAudienceModel.m */,
 				959F098F20AC01B000387069 /* BBLiveListRoomInfoModel.h */,
 				959F099020AC01B000387069 /* BBLiveListRoomInfoModel.m */,
 				959F098B20AC012500387069 /* BBLiveRoomDetailInfoModel.h */,
 				959F098C20AC012500387069 /* BBLiveRoomDetailInfoModel.m */,
 				958BED8820A3F0DE00508ECB /* BBLiveUserRoom.h */,
 				958BED8920A3F0DE00508ECB /* BBLiveUserRoom.m */,
+				954354E320AD1BFB00774A04 /* BBLivePlayer.h */,
+				954354E420AD1BFB00774A04 /* BBLivePlayer.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -293,8 +305,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				95192FCD20AAA4BA00C96419 /* BBLiveManager.h in Headers */,
+				954354E520AD1BFB00774A04 /* BBLivePlayer.h in Headers */,
 				9585FCCB20A91F920023D484 /* BBLiveRoomBottomViewController.h in Headers */,
 				959F099120AC01B000387069 /* BBLiveListRoomInfoModel.h in Headers */,
+				954354F220AD758100774A04 /* BBLiveRoomAudienceListRequest.h in Headers */,
 				95192FDA20AABF8400C96419 /* BBLiveBaseRequest+Private.h in Headers */,
 				954354E120AD10DA00774A04 /* UIImage+LoadSDKResource.h in Headers */,
 				959F098320ABDEAB00387069 /* BBLivingModel.h in Headers */,
@@ -306,6 +320,7 @@
 				958BECE020A163EA00508ECB /* BBLiveSDK.h in Headers */,
 				95192FC520AA8EDD00C96419 /* BBLivingListRequest.h in Headers */,
 				958BED8A20A3F0DE00508ECB /* BBLiveUserRoom.h in Headers */,
+				954354F620AD76FE00774A04 /* BBLiveAudienceModel.h in Headers */,
 				95192FD120AAAA5E00C96419 /* BBLiveBaseRequest+Common.h in Headers */,
 				95192FC920AA92D000C96419 /* BBLiveConfig.h in Headers */,
 				958BED3A20A16D7700508ECB /* BBLiveRoomHandle.h in Headers */,
@@ -399,8 +414,6 @@
 				954354D120AC38A900774A04 /* BBLiveRoomTopViewController.xib in Resources */,
 				954354D020AC38A000774A04 /* BBLiveRoomViewController.xib in Resources */,
 				954354CE20AC28AF00774A04 /* Resource.xcassets in Resources */,
-				954354D520AC420600774A04 /* lingdang@2x.png in Resources */,
-				954354D620AC420600774A04 /* lingdang@3x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,15 +482,18 @@
 				95192FC420AA8EDD00C96419 /* BBLivingListRequest.m in Sources */,
 				95192FD220AAAA5E00C96419 /* BBLiveBaseRequest+Common.m in Sources */,
 				9585FCCC20A91F920023D484 /* BBLiveRoomBottomViewController.m in Sources */,
+				954354E620AD1BFB00774A04 /* BBLivePlayer.m in Sources */,
 				95192FB620A9456E00C96419 /* BBLiveBaseRequest.m in Sources */,
 				95192FD720AAAECE00C96419 /* NSString+BBLiveSDKTools.m in Sources */,
 				958BED3B20A16D7700508ECB /* BBLiveRoomHandle.m in Sources */,
 				95192FCE20AAA4BA00C96419 /* BBLiveManager.m in Sources */,
 				959F099220AC01B000387069 /* BBLiveListRoomInfoModel.m in Sources */,
+				954354F320AD758100774A04 /* BBLiveRoomAudienceListRequest.m in Sources */,
 				959F098E20AC012500387069 /* BBLiveRoomDetailInfoModel.m in Sources */,
 				95192FBA20A94F5600C96419 /* BBLiveNetworkAgent.m in Sources */,
 				9585FC6B20A59AA20023D484 /* BBLiveRoomTopViewController.m in Sources */,
 				959F098420ABDEAB00387069 /* BBLivingModel.m in Sources */,
+				954354F720AD76FE00774A04 /* BBLiveAudienceModel.m in Sources */,
 				958BED8B20A3F0DE00508ECB /* BBLiveUserRoom.m in Sources */,
 				958BED3420A16B6F00508ECB /* BBLiveRoomViewController.m in Sources */,
 				95192FCA20AA92D000C96419 /* BBLiveConfig.m in Sources */,

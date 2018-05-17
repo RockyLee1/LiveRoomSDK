@@ -6,6 +6,8 @@
 //  Copyright © 2018年 linzuhan. All rights reserved.
 //
 
+/* 用户进房接口 */
+
 #import "BBLiveBaseRequest.h"
 
 @class BBLiveRoomDetailInfoModel;

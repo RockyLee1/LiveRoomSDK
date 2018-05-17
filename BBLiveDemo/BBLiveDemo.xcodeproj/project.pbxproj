@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		626EEC61ADFA941231C517A7 /* libPods-BBLiveDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68A705B585A495EAE3B6540F /* libPods-BBLiveDemo.a */; };
-		954354DE20AC44CA00774A04 /* BBLiveSDKResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 954354D920AC438E00774A04 /* BBLiveSDKResource.bundle */; };
+		954354EA20AD33E800774A04 /* BBLiveSDKResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 954354D920AC438E00774A04 /* BBLiveSDKResource.bundle */; };
 		9585FC0420A403FE0023D484 /* BBLiveSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9585FBFF20A403C60023D484 /* BBLiveSDK.framework */; };
-		9585FC6620A583990023D484 /* BBLiveSDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = 9585FBFF20A403C60023D484 /* BBLiveSDK.framework */; };
 		958BECF720A1643300508ECB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 958BECF620A1643300508ECB /* AppDelegate.m */; };
 		958BECFA20A1643300508ECB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 958BECF920A1643300508ECB /* ViewController.m */; };
 		958BECFD20A1643300508ECB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 958BECFB20A1643300508ECB /* Main.storyboard */; };
@@ -359,8 +358,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				954354DE20AC44CA00774A04 /* BBLiveSDKResource.bundle in Resources */,
-				9585FC6620A583990023D484 /* BBLiveSDK.framework in Resources */,
+				954354EA20AD33E800774A04 /* BBLiveSDKResource.bundle in Resources */,
 				958BED0220A1643600508ECB /* LaunchScreen.storyboard in Resources */,
 				958BECFF20A1643600508ECB /* Assets.xcassets in Resources */,
 				958BECFD20A1643300508ECB /* Main.storyboard in Resources */,

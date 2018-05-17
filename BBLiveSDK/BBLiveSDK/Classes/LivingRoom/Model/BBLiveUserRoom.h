@@ -13,10 +13,14 @@
 
 @interface BBLiveUserRoom : NSObject
 
+// 进直播间前的直播间基本信息
 @property (nonatomic, strong) BBLiveListRoomInfoModel *roomInfo;
+
+// 直播间详细信息
 @property (nonatomic, strong) BBLiveRoomDetailInfoModel *roomDetailInfo;
 
 @property (nonatomic, copy) void (^enterLiveRoomCompleteBlock)(void);
+@property (nonatomic, copy) void (^liveRoomAudienceRequestCompleteBlock)(void);
 
 - (void)enterLiveUserRoom;
 - (void)enterLiveUserRoomWithRoomInfo:(BBLiveListRoomInfoModel *)roomInfo;

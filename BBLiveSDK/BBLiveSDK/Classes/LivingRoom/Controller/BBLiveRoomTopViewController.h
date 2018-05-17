@@ -8,6 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
+@class BBLiveRoomDetailInfoModel;
+
 @interface BBLiveRoomTopViewController : UIViewController
+
+- (void)refreshTopViewWithLiveRoomDetailInfoModel:(BBLiveRoomDetailInfoModel *)model;
 
 @end
