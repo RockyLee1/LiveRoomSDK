@@ -35,6 +35,11 @@
 
 @implementation BBLiveRoomViewController
 
+- (void)dealloc
+{
+    
+}
+
 - (BBLiveUserRoom *)liveUserRoom
 {
     if (!_liveUserRoom) {
@@ -53,6 +58,13 @@
 {
     [super viewDidLoad];
     
+    
+    
+    
+}
+
+- (void)enterLiveUserRoom
+{
     [self.liveUserRoom enterLiveUserRoom];
     @weakify(self)
     [self.liveUserRoom setEnterLiveRoomCompleteBlock:^{
@@ -63,21 +75,31 @@
     }];
     
     [self.liveUserRoom setLiveRoomAudienceRequestCompleteBlock:^{
+        @strongify(self)
+        
+        [self.topViewController refreshAudienceCollectionViewWithList:self.liveUserRoom.audienceList];
         
     }];
-    
+}
+
+- (void)setupUI
+{
     //
     self.livePlayer = [BBLivePlayer livePlayerWithUrl:self.liveUserRoom.roomInfo.livingURL
                                     playerContentView:self.playerContentView];
     [self.livePlayer play];
     
     [self.topContentView addSubview:self.topViewController.view];
+    [self.topViewController.view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(@0);
+    }];
     
-    //
     [self.bottomContentView addSubview:self.bottomViewController.view];
     [self.bottomViewController.view mas_makeConstraints:^(MASConstraintMaker *make) {
         make.edges.equalTo(@0);
     }];
+    
+    [self.scrollView setContentOffset:CGPointMake(CGRectGetWidth([UIScreen mainScreen].bounds), 0) animated:NO];
 }
 
 - (BBLiveRoomTopViewController *)topViewController

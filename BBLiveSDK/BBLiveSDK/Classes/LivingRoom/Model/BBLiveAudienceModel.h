@@ -12,7 +12,7 @@
 
 @interface BBLiveAudienceModel : NSObject
 
-@property (nonatomic, copy) NSString *headImage;
+@property (nonatomic, copy) NSString *avatar;
 @property (nonatomic, copy) NSString *nickname;
 @property (nonatomic, assign) NSInteger isRobot;
 @property (nonatomic, assign) NSInteger userLevel;

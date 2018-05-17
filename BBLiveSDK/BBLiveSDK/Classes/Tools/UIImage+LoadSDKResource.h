@@ -9,6 +9,8 @@
 #import <UIKit/UIKit.h>
 #import <Foundation/Foundation.h>
 
+#define BBLiveImage(name) [UIImage BBLiveImageWithName:name]
+
 @interface UIImage (LoadSDKResource)
 
 + (UIImage *)BBLiveImageWithName:(NSString *)name;

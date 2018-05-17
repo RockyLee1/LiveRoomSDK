@@ -53,6 +53,7 @@
         [self.audienceListRequest startRequestWithCompleteBlockWithSuccess:^(__kindof BBLiveBaseRequest *request) {
             @strongify(self)
             
+            self.audienceList = [self.audienceListRequest.audienceList mutableCopy];
             dispatch_async(dispatch_get_main_queue(), ^{
                 if (self.liveRoomAudienceRequestCompleteBlock) {
                     self.liveRoomAudienceRequestCompleteBlock();

@@ -8,10 +8,19 @@
 
 #import "BBLiveRoomTopViewController.h"
 #import "BBLiveRoomDetailInfoModel.h"
+#import "BBLiveAudienceModel.h"
 
 #import <SDWebImage/UIImageView+WebCache.h>
+#import <Masonry/Masonry.h>
 
-@interface BBLiveRoomTopViewController ()
+#import "UIImage+LoadSDKResource.h"
+
+#define kAudienceCellIdentifier @"kAudienceCellIdentifier"
+
+@interface BBLiveRoomTopViewController ()<
+UICollectionViewDelegate,
+UICollectionViewDataSource
+>
 
 @property (weak, nonatomic) IBOutlet UIImageView *anchorAvatarImageView;
 @property (weak, nonatomic) IBOutlet UILabel *anchorNameLabel;
@@ -23,6 +32,10 @@
 
 @property (weak, nonatomic) IBOutlet UILabel *charmValueLabel;
 
+@property (weak, nonatomic) IBOutlet UICollectionView *audienceCollectionView;
+
+@property (strong, nonatomic) NSMutableArray *audienceList;
+
 @end
 
 @implementation BBLiveRoomTopViewController
@@ -31,6 +44,7 @@
 {
     [super viewDidLoad];
     
+    [self.audienceCollectionView registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:kAudienceCellIdentifier];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,6 +58,57 @@
     [self.anchorAvatarImageView sd_setImageWithURL:[NSURL URLWithString:model.anchorHeadImg]];
     
 }
+
+- (void)refreshAudienceCollectionViewWithList:(NSArray *)audienceList
+{
+    self.audienceList = [audienceList mutableCopy];
+    
+    [self.audienceCollectionView reloadData];
+}
+
+- (void)insertAudienceWithAudienceModel:(BBLiveAudienceModel *)audienceModel
+{
+//    [self.audienceCollectionView inser]
+}
+
+#pragma mark - UICollectionViewDelegate & UICollectionViewDataSource
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return self.audienceList.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:kAudienceCellIdentifier forIndexPath:indexPath];
+    
+    // 初始化
+    UIImageView *audienceImageView = [cell.contentView viewWithTag:20180517];
+    if (!audienceImageView) {
+        audienceImageView = [[UIImageView alloc] init];
+        audienceImageView.layer.cornerRadius = 16.f;
+        audienceImageView.layer.masksToBounds = YES;
+        audienceImageView.layer.borderColor = [UIColor whiteColor].CGColor;
+        audienceImageView.layer.borderWidth = 1.f;
+        
+        [cell.contentView addSubview:audienceImageView];
+        [audienceImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+            make.top.left.bottom.right.equalTo(@0);
+        }];
+    }
+    
+    // 赋值
+    BBLiveAudienceModel *audienceModel = [self.audienceList objectAtIndex:indexPath.item];
+    [audienceImageView sd_setImageWithURL:[NSURL URLWithString:audienceModel.avatar] placeholderImage:BBLiveImage(@"floorplan")];
+  
+    return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+}
+
 
 /*
 #pragma mark - Navigation

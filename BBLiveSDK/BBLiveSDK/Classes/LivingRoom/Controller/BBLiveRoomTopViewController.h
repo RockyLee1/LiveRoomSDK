@@ -14,4 +14,6 @@
 
 - (void)refreshTopViewWithLiveRoomDetailInfoModel:(BBLiveRoomDetailInfoModel *)model;
 
+- (void)refreshAudienceCollectionViewWithList:(NSArray *)audienceList;
+
 @end

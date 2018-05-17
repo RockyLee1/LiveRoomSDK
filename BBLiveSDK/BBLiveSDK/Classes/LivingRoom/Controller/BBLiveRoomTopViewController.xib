@@ -14,6 +14,7 @@
                 <outlet property="anchorAvatarImageView" destination="JBN-03-bRd" id="ua7-27-F2K"/>
                 <outlet property="anchorNameLabel" destination="pje-Cq-tci" id="0I4-bg-ALI"/>
                 <outlet property="attentionBtn" destination="TWo-cL-ODN" id="Axq-mh-v2o"/>
+                <outlet property="audienceCollectionView" destination="gzG-Pn-QQM" id="HJx-F5-lmS"/>
                 <outlet property="charmValueLabel" destination="GNI-ow-dyN" id="wdq-Yi-VFD"/>
                 <outlet property="experienceLabel" destination="EoG-0i-e5l" id="e4y-6b-kLV"/>
                 <outlet property="hotIconImageView" destination="sgb-13-Ahu" id="4mE-dv-1QX"/>
@@ -93,9 +94,29 @@
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vf6-oM-Uvr">
                     <rect key="frame" x="186" y="7" width="179" height="32"/>
-                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <subviews>
+                        <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="gzG-Pn-QQM">
+                            <rect key="frame" x="0.0" y="0.0" width="179" height="32"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="5" minimumInteritemSpacing="5" id="RjZ-NI-v6a">
+                                <size key="itemSize" width="32" height="32"/>
+                                <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                            </collectionViewFlowLayout>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="yfY-hd-beq"/>
+                                <outlet property="delegate" destination="-1" id="Sp4-Kg-Iyv"/>
+                            </connections>
+                        </collectionView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstItem="gzG-Pn-QQM" firstAttribute="top" secondItem="Vf6-oM-Uvr" secondAttribute="top" id="A2O-Up-d2O"/>
+                        <constraint firstItem="gzG-Pn-QQM" firstAttribute="leading" secondItem="Vf6-oM-Uvr" secondAttribute="leading" id="DLl-lF-QM7"/>
                         <constraint firstAttribute="height" constant="32" id="Tme-cu-eWI"/>
+                        <constraint firstAttribute="bottom" secondItem="gzG-Pn-QQM" secondAttribute="bottom" id="mcL-8A-Eak"/>
+                        <constraint firstAttribute="trailing" secondItem="gzG-Pn-QQM" secondAttribute="trailing" id="pH6-vv-l1V"/>
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sMJ-jl-kzt">
@@ -137,7 +158,7 @@
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="0.56694931230000001" green="0.7980528013" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="sMJ-jl-kzt" firstAttribute="top" secondItem="a3Y-Dq-oSZ" secondAttribute="bottom" constant="6" id="0Dl-au-SVL"/>
                 <constraint firstItem="a3Y-Dq-oSZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="7" id="178-Da-VUV"/>

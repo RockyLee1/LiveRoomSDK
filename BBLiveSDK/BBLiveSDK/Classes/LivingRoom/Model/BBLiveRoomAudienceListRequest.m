@@ -31,8 +31,8 @@
 {
     NSArray *dataArray = responseDic[@"data"];
     if (dataArray
-        && dataArray.count > 0
-        && [dataArray isKindOfClass:[NSArray class]]) {
+        && [dataArray isKindOfClass:[NSArray class]]
+        && dataArray.count > 0) {
         
         NSMutableArray *tmpArray = [NSMutableArray array];
         for (NSDictionary *dic in dataArray) {

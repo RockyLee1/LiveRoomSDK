@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9510AB0C20AD9BD100EF201A /* UIViewController+LoadSDKResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 9510AB0A20AD9BD100EF201A /* UIViewController+LoadSDKResource.h */; };
+		9510AB0D20AD9BD100EF201A /* UIViewController+LoadSDKResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9510AB0B20AD9BD100EF201A /* UIViewController+LoadSDKResource.m */; };
+		9510AB1020AD9C2500EF201A /* NSBundle+SDKResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 9510AB0E20AD9C2500EF201A /* NSBundle+SDKResource.h */; };
+		9510AB1120AD9C2500EF201A /* NSBundle+SDKResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 9510AB0F20AD9C2500EF201A /* NSBundle+SDKResource.m */; };
 		95192FB520A9456E00C96419 /* BBLiveBaseRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 95192FB320A9456E00C96419 /* BBLiveBaseRequest.h */; };
 		95192FB620A9456E00C96419 /* BBLiveBaseRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 95192FB420A9456E00C96419 /* BBLiveBaseRequest.m */; };
 		95192FB920A94F5600C96419 /* BBLiveNetworkAgent.h in Headers */ = {isa = PBXBuildFile; fileRef = 95192FB720A94F5600C96419 /* BBLiveNetworkAgent.h */; };
@@ -69,6 +73,10 @@
 
 /* Begin PBXFileReference section */
 		603753F6805C37E107E04760 /* Pods-BBLiveSDK.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBLiveSDK.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-BBLiveSDK/Pods-BBLiveSDK.debug.xcconfig"; sourceTree = "<group>"; };
+		9510AB0A20AD9BD100EF201A /* UIViewController+LoadSDKResource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LoadSDKResource.h"; sourceTree = "<group>"; };
+		9510AB0B20AD9BD100EF201A /* UIViewController+LoadSDKResource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LoadSDKResource.m"; sourceTree = "<group>"; };
+		9510AB0E20AD9C2500EF201A /* NSBundle+SDKResource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSBundle+SDKResource.h"; sourceTree = "<group>"; };
+		9510AB0F20AD9C2500EF201A /* NSBundle+SDKResource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSBundle+SDKResource.m"; sourceTree = "<group>"; };
 		95192FB320A9456E00C96419 /* BBLiveBaseRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBLiveBaseRequest.h; sourceTree = "<group>"; };
 		95192FB420A9456E00C96419 /* BBLiveBaseRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLiveBaseRequest.m; sourceTree = "<group>"; };
 		95192FB720A94F5600C96419 /* BBLiveNetworkAgent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBLiveNetworkAgent.h; sourceTree = "<group>"; };
@@ -192,8 +200,12 @@
 			children = (
 				95192FD420AAAECE00C96419 /* NSString+BBLiveSDKTools.h */,
 				95192FD520AAAECE00C96419 /* NSString+BBLiveSDKTools.m */,
+				9510AB0E20AD9C2500EF201A /* NSBundle+SDKResource.h */,
+				9510AB0F20AD9C2500EF201A /* NSBundle+SDKResource.m */,
 				954354DF20AD10DA00774A04 /* UIImage+LoadSDKResource.h */,
 				954354E020AD10DA00774A04 /* UIImage+LoadSDKResource.m */,
+				9510AB0A20AD9BD100EF201A /* UIViewController+LoadSDKResource.h */,
+				9510AB0B20AD9BD100EF201A /* UIViewController+LoadSDKResource.m */,
 			);
 			path = Tools;
 			sourceTree = "<group>";
@@ -323,6 +335,8 @@
 				954354F620AD76FE00774A04 /* BBLiveAudienceModel.h in Headers */,
 				95192FD120AAAA5E00C96419 /* BBLiveBaseRequest+Common.h in Headers */,
 				95192FC920AA92D000C96419 /* BBLiveConfig.h in Headers */,
+				9510AB0C20AD9BD100EF201A /* UIViewController+LoadSDKResource.h in Headers */,
+				9510AB1020AD9C2500EF201A /* NSBundle+SDKResource.h in Headers */,
 				958BED3A20A16D7700508ECB /* BBLiveRoomHandle.h in Headers */,
 				959F098D20AC012500387069 /* BBLiveRoomDetailInfoModel.h in Headers */,
 				95192FD620AAAECE00C96419 /* NSString+BBLiveSDKTools.h in Headers */,
@@ -479,6 +493,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				954354E220AD10DA00774A04 /* UIImage+LoadSDKResource.m in Sources */,
+				9510AB1120AD9C2500EF201A /* NSBundle+SDKResource.m in Sources */,
 				95192FC420AA8EDD00C96419 /* BBLivingListRequest.m in Sources */,
 				95192FD220AAAA5E00C96419 /* BBLiveBaseRequest+Common.m in Sources */,
 				9585FCCC20A91F920023D484 /* BBLiveRoomBottomViewController.m in Sources */,
@@ -496,6 +511,7 @@
 				954354F720AD76FE00774A04 /* BBLiveAudienceModel.m in Sources */,
 				958BED8B20A3F0DE00508ECB /* BBLiveUserRoom.m in Sources */,
 				958BED3420A16B6F00508ECB /* BBLiveRoomViewController.m in Sources */,
+				9510AB0D20AD9BD100EF201A /* UIViewController+LoadSDKResource.m in Sources */,
 				95192FCA20AA92D000C96419 /* BBLiveConfig.m in Sources */,
 				959F098A20ABFD8900387069 /* BBLiveUserEnterRoomRequest.m in Sources */,
 			);

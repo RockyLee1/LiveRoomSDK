@@ -9,8 +9,6 @@
 #import "BBLiveRoomBottomViewController.h"
 #import "UIImage+LoadSDKResource.h"
 
-#define BBLiveImage(name) [UIImage BBLiveImageWithName:name]
-
 @interface BBLiveRoomBottomViewController ()
 
 @property (weak, nonatomic) IBOutlet UIView *inputContentView;
