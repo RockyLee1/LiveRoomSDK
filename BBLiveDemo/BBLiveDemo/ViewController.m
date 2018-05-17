@@ -11,7 +11,18 @@
 #import "BBLiveSDK.h"
 #import "BBLivingListRequest.h"
 
-@interface ViewController ()
+#import "UserModel.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+
+@interface ViewController ()<
+UICollectionViewDelegate,
+UICollectionViewDataSource
+>
+
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+
+@property (strong, nonatomic) BBLivingListRequest *listRequest;
+
 
 @end
 
@@ -31,7 +42,10 @@
     BBLiveConfig *liveConfig = [[BBLiveConfig alloc] init];
     liveConfig.versionCode = @"10";
     liveConfig.os = @"2";
-    liveConfig.token = @"ODAwMTZfOERCNzUzQzI4RTdGMTVEODVCNUQ3Mzg1QTQ3NUMzQUZfMl9EMzQwMDhBQy1BNzYyLTQyNjEtOEVDOS04QkIxRjZDNkNDM0VfMTUyNjM2ODU5NV9iYW5iYW4xMjM0NTY=";
+    
+    if ([UserModel shareModel].token.length > 0) {
+        liveConfig.token = [UserModel shareModel].token;
+    }
     
     [[BBLiveManager shareLiveManager] configLiveManagerWithConfig:liveConfig];
     
@@ -42,8 +56,16 @@
 
 - (IBAction)requestList:(UIButton *)sender
 {
-    BBLivingListRequest *request = [[BBLivingListRequest alloc] init];
-    [request startRequest];
+    self.listRequest = [[BBLivingListRequest alloc] init];
+    [self.listRequest startRequestWithCompleteBlockWithSuccess:^(__kindof BBLiveBaseRequest *request) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.collectionView reloadData];
+        });
+        
+        
+    } failure:^(__kindof BBLiveBaseRequest *request) {
+        
+    }];
 }
 
 - (IBAction)enterLiveRoomBtnClicked:(UIButton *)sender
@@ -51,6 +73,50 @@
     UIViewController *room = [BBLiveRoomHandle liveRoomWithRoomURL:nil];
     
     [self presentViewController:room animated:YES completion:^{
+        
+    }];
+}
+
+#pragma mark -
+
+- (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section
+{
+    return self.listRequest.list.count;
+}
+
+- (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:@"LivingCellIdentifier" forIndexPath:indexPath];
+    
+    UIImageView *imageView = [cell.contentView viewWithTag:100];
+    UILabel *label = [cell.contentView viewWithTag:101];
+    
+    BBLivingModel *model = [self.listRequest.list objectAtIndex:indexPath.item];
+    
+    [imageView sd_setImageWithURL:[NSURL URLWithString:model.livingImg]];
+    label.text = model.nickname;
+    
+    
+    return cell;
+}
+
+- (void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath
+{
+    BBLivingModel *model = [self.listRequest.list objectAtIndex:indexPath.item];
+    
+    NSString *livingUrlString = model.domain;
+    
+    BBLiveListRoomInfoModel *roomInfoModel = [[BBLiveListRoomInfoModel alloc] init];
+    roomInfoModel.roomId = model.uid;
+    roomInfoModel.livingCoverImageURL = model.livingImg;
+    roomInfoModel.livingURL = model.domain;
+    
+    
+//    UIViewController *livingRoom = [BBLiveRoomHandle liveRoomWithRoomURL:livingUrlString];
+    
+    UIViewController *livingRoom = [BBLiveRoomHandle liveRoomWithListRoomInfo:roomInfoModel];
+    
+    [self presentViewController:livingRoom animated:YES completion:^{
         
     }];
 }

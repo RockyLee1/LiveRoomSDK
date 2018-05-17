@@ -7,7 +7,10 @@
 //
 
 #import "BBLiveBaseRequest.h"
+#import "BBLivingModel.h"
 
 @interface BBLivingListRequest : BBLiveBaseRequest
+
+@property (nonatomic, strong) NSArray <__kindof BBLivingModel *>*list;
 
 @end

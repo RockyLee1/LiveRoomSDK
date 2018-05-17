@@ -1,2 +1,4 @@
 *.xcuserstate
 BBLive.xcworkspace/xcuserdata
+BBLiveSDK/BBLiveSDK.xcodeproj/xcuserdata
+BBLiveDemo/BBLiveDemo.xcodeproj/xcuserdata

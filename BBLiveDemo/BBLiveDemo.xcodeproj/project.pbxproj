@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		626EEC61ADFA941231C517A7 /* libPods-BBLiveDemo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 68A705B585A495EAE3B6540F /* libPods-BBLiveDemo.a */; };
+		954354DE20AC44CA00774A04 /* BBLiveSDKResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 954354D920AC438E00774A04 /* BBLiveSDKResource.bundle */; };
 		9585FC0420A403FE0023D484 /* BBLiveSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9585FBFF20A403C60023D484 /* BBLiveSDK.framework */; };
 		9585FC6620A583990023D484 /* BBLiveSDK.framework in Resources */ = {isa = PBXBuildFile; fileRef = 9585FBFF20A403C60023D484 /* BBLiveSDK.framework */; };
 		958BECF720A1643300508ECB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 958BECF620A1643300508ECB /* AppDelegate.m */; };
@@ -18,24 +19,27 @@
 		958BED0520A1643700508ECB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 958BED0420A1643600508ECB /* main.m */; };
 		958BED0F20A1643700508ECB /* BBLiveDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 958BED0E20A1643700508ECB /* BBLiveDemoTests.m */; };
 		958BED1A20A1643700508ECB /* BBLiveDemoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 958BED1920A1643700508ECB /* BBLiveDemoUITests.m */; };
+		959F097820ABC2DE00387069 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 959F097720ABC2DE00387069 /* LoginViewController.m */; };
+		959F097C20ABC49400387069 /* LoginRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 959F097B20ABC49400387069 /* LoginRequest.m */; };
+		959F097F20ABCB8500387069 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 959F097E20ABCB8500387069 /* UserModel.m */; };
 		ECD5E68CBD8B0BB4178310E7 /* libPods-BBLiveDemoTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F55F7E1C1D467CBD2A156D7A /* libPods-BBLiveDemoTests.a */; };
 		F09766036D4341DE6C52BC0A /* libPods-BBLiveDemoUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = ECE33B91D55D6202B4AAE530 /* libPods-BBLiveDemoUITests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		954354D820AC438E00774A04 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9585FBF920A403C60023D484 /* BBLiveSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 954354C520AC26C600774A04;
+			remoteInfo = BBLiveSDKResource;
+		};
 		9585FBFE20A403C60023D484 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 9585FBF920A403C60023D484 /* BBLiveSDK.xcodeproj */;
 			proxyType = 2;
 			remoteGlobalIDString = 958BECCF20A163EA00508ECB;
 			remoteInfo = BBLiveSDK;
-		};
-		9585FC0020A403C60023D484 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 9585FBF920A403C60023D484 /* BBLiveSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 958BECD820A163EA00508ECB;
-			remoteInfo = BBLiveSDKTests;
 		};
 		9585FC0220A403D70023D484 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -82,6 +86,12 @@
 		958BED1520A1643700508ECB /* BBLiveDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBLiveDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		958BED1920A1643700508ECB /* BBLiveDemoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLiveDemoUITests.m; sourceTree = "<group>"; };
 		958BED1B20A1643700508ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		959F097620ABC2DE00387069 /* LoginViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
+		959F097720ABC2DE00387069 /* LoginViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
+		959F097A20ABC49400387069 /* LoginRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginRequest.h; sourceTree = "<group>"; };
+		959F097B20ABC49400387069 /* LoginRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginRequest.m; sourceTree = "<group>"; };
+		959F097D20ABCB8500387069 /* UserModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		959F097E20ABCB8500387069 /* UserModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		B5821A848A00D0F0ADE6ED99 /* Pods-BBLiveDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBLiveDemo.release.xcconfig"; path = "../Pods/Target Support Files/Pods-BBLiveDemo/Pods-BBLiveDemo.release.xcconfig"; sourceTree = "<group>"; };
 		D28DC02E08E3E46D7FA0392B /* Pods-BBLiveDemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBLiveDemoTests.release.xcconfig"; path = "../Pods/Target Support Files/Pods-BBLiveDemoTests/Pods-BBLiveDemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		E2524FC0FFA5699DFC8CD64F /* Pods-BBLiveDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBLiveDemo.debug.xcconfig"; path = "../Pods/Target Support Files/Pods-BBLiveDemo/Pods-BBLiveDemo.debug.xcconfig"; sourceTree = "<group>"; };
@@ -135,7 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				9585FBFF20A403C60023D484 /* BBLiveSDK.framework */,
-				9585FC0120A403C60023D484 /* BBLiveSDKTests.xctest */,
+				954354D920AC438E00774A04 /* BBLiveSDKResource.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -170,6 +180,12 @@
 				958BECF620A1643300508ECB /* AppDelegate.m */,
 				958BECF820A1643300508ECB /* ViewController.h */,
 				958BECF920A1643300508ECB /* ViewController.m */,
+				959F097620ABC2DE00387069 /* LoginViewController.h */,
+				959F097720ABC2DE00387069 /* LoginViewController.m */,
+				959F097A20ABC49400387069 /* LoginRequest.h */,
+				959F097B20ABC49400387069 /* LoginRequest.m */,
+				959F097D20ABCB8500387069 /* UserModel.h */,
+				959F097E20ABCB8500387069 /* UserModel.m */,
 				958BECFB20A1643300508ECB /* Main.storyboard */,
 				958BECFE20A1643600508ECB /* Assets.xcassets */,
 				958BED0020A1643600508ECB /* LaunchScreen.storyboard */,
@@ -322,18 +338,18 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		954354D920AC438E00774A04 /* BBLiveSDKResource.bundle */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = BBLiveSDKResource.bundle;
+			remoteRef = 954354D820AC438E00774A04 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		9585FBFF20A403C60023D484 /* BBLiveSDK.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = BBLiveSDK.framework;
 			remoteRef = 9585FBFE20A403C60023D484 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		9585FC0120A403C60023D484 /* BBLiveSDKTests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = BBLiveSDKTests.xctest;
-			remoteRef = 9585FC0020A403C60023D484 /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -343,6 +359,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				954354DE20AC44CA00774A04 /* BBLiveSDKResource.bundle in Resources */,
 				9585FC6620A583990023D484 /* BBLiveSDK.framework in Resources */,
 				958BED0220A1643600508ECB /* LaunchScreen.storyboard in Resources */,
 				958BECFF20A1643600508ECB /* Assets.xcassets in Resources */,
@@ -524,9 +541,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				959F097820ABC2DE00387069 /* LoginViewController.m in Sources */,
 				958BECFA20A1643300508ECB /* ViewController.m in Sources */,
+				959F097F20ABCB8500387069 /* UserModel.m in Sources */,
 				958BED0520A1643700508ECB /* main.m in Sources */,
 				958BECF720A1643300508ECB /* AppDelegate.m in Sources */,
+				959F097C20ABC49400387069 /* LoginRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -705,13 +725,14 @@
 				DEVELOPMENT_TEAM = PF3BSY7RH3;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = BBLiveDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				ONLY_ACTIVE_ARCH = YES;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -737,7 +758,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bobei.BBLiveDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "/Users/linzuhan/Documents/Demo/BBLive/BBLiveSDK/BBLiveSDK/**";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../BBLiveSDK\"/**";
+				VALID_ARCHS = arm64;
 			};
 			name = Debug;
 		};
@@ -750,7 +772,7 @@
 				DEVELOPMENT_TEAM = PF3BSY7RH3;
 				ENABLE_BITCODE = NO;
 				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
-				HEADER_SEARCH_PATHS = "";
+				HEADER_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = BBLiveDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -782,7 +804,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bobei.BBLiveDemo;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
-				USER_HEADER_SEARCH_PATHS = "/Users/linzuhan/Documents/Demo/BBLive/BBLiveSDK/BBLiveSDK/**";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/../BBLiveSDK\"/**";
+				VALID_ARCHS = arm64;
 			};
 			name = Release;
 		};

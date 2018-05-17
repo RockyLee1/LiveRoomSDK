@@ -13,9 +13,19 @@
 
 + (UIViewController *)liveRoomWithRoomURL:(NSString *)url
 {
-    BBLiveRoomViewController *liveRoomVC = [[BBLiveRoomViewController alloc] initWithNibName:@"BBLiveSDK.framework/BBLiveRoomViewController" bundle:nil];
+    BBLiveRoomViewController *liveRoomVC = [[BBLiveRoomViewController alloc] initWithNibName:@"BBLiveSDKResource.bundle/BBLiveRoomViewController" bundle:nil];
+    liveRoomVC.livingRoomURLString = url;
     
     return liveRoomVC;
 }
+
++ (UIViewController *)liveRoomWithListRoomInfo:(BBLiveListRoomInfoModel *)roomInfo
+{
+    BBLiveRoomViewController *liveRoomVC = [[BBLiveRoomViewController alloc] initWithNibName:@"BBLiveSDKResource.bundle/BBLiveRoomViewController" bundle:nil];
+    liveRoomVC.liveUserRoom.roomInfo = roomInfo;
+    
+    return liveRoomVC;
+}
+
 
 @end

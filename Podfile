@@ -14,6 +14,7 @@ target 'BBLiveDemo' do
 
   # Pods for BBLiveDemo
    pod 'SDWebImage', '~> 4.3.3'
+   pod 'MJExtension', '~> 3.0.13'
 
 
   target 'BBLiveDemoTests' do
@@ -35,6 +36,10 @@ target 'BBLiveSDK' do
    pod 'AFNetworking', '~> 3.2.0'
    pod 'RongCloudIM/IMLib', '~> 2.8.3'
    pod 'FCUUID', '~> 1.3.1'
+   pod 'MJExtension', '~> 3.0.13'
+   pod 'SDWebImage', '~> 4.3.3'
+   pod 'Masonry', '~> 1.1.0'
+
 
    
 #   真机

@@ -9,8 +9,12 @@
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
 
+#import "BBLiveListRoomInfoModel.h"
+
 @interface BBLiveRoomHandle : NSObject
 
 + (UIViewController *)liveRoomWithRoomURL:(NSString *)url;
+
++ (UIViewController *)liveRoomWithListRoomInfo:(BBLiveListRoomInfoModel *)roomInfo;
 
 @end

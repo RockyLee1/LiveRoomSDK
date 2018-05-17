@@ -32,7 +32,7 @@
     long long requestTimeLong = [@(requestTime) longLongValue];
     NSString *imei = [FCUUID uuidForDevice];
     NSString *os = config.os;
-    NSString *token = config.token;
+    NSString *token = config.token ?: @"";
     
     // 加密
     NSString *ncode = [NSString stringWithFormat:@"%@%@%@%@",seed,imei,os,@(requestTimeLong)];

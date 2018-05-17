@@ -22,34 +22,44 @@
 		95192FD620AAAECE00C96419 /* NSString+BBLiveSDKTools.h in Headers */ = {isa = PBXBuildFile; fileRef = 95192FD420AAAECE00C96419 /* NSString+BBLiveSDKTools.h */; };
 		95192FD720AAAECE00C96419 /* NSString+BBLiveSDKTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 95192FD520AAAECE00C96419 /* NSString+BBLiveSDKTools.m */; };
 		95192FDA20AABF8400C96419 /* BBLiveBaseRequest+Private.h in Headers */ = {isa = PBXBuildFile; fileRef = 95192FD820AABF8400C96419 /* BBLiveBaseRequest+Private.h */; };
+		954354CE20AC28AF00774A04 /* Resource.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 954354CD20AC28AF00774A04 /* Resource.xcassets */; };
+		954354D020AC38A000774A04 /* BBLiveRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 958BED3220A16B6F00508ECB /* BBLiveRoomViewController.xib */; };
+		954354D120AC38A900774A04 /* BBLiveRoomTopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9585FC6920A59AA20023D484 /* BBLiveRoomTopViewController.xib */; };
+		954354D220AC38AE00774A04 /* BBLiveRoomBottomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9585FCCA20A91F920023D484 /* BBLiveRoomBottomViewController.xib */; };
+		954354D520AC420600774A04 /* lingdang@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 954354D320AC420600774A04 /* lingdang@2x.png */; };
+		954354D620AC420600774A04 /* lingdang@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 954354D420AC420600774A04 /* lingdang@3x.png */; };
+		954354DD20AC442600774A04 /* BBLiveSDKResource.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 954354C520AC26C600774A04 /* BBLiveSDKResource.bundle */; };
+		954354E120AD10DA00774A04 /* UIImage+LoadSDKResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 954354DF20AD10DA00774A04 /* UIImage+LoadSDKResource.h */; };
+		954354E220AD10DA00774A04 /* UIImage+LoadSDKResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 954354E020AD10DA00774A04 /* UIImage+LoadSDKResource.m */; };
 		9585FC6A20A59AA20023D484 /* BBLiveRoomTopViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9585FC6720A59AA20023D484 /* BBLiveRoomTopViewController.h */; };
 		9585FC6B20A59AA20023D484 /* BBLiveRoomTopViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585FC6820A59AA20023D484 /* BBLiveRoomTopViewController.m */; };
-		9585FC6C20A59AA20023D484 /* BBLiveRoomTopViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9585FC6920A59AA20023D484 /* BBLiveRoomTopViewController.xib */; };
 		9585FCCB20A91F920023D484 /* BBLiveRoomBottomViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 9585FCC820A91F920023D484 /* BBLiveRoomBottomViewController.h */; };
 		9585FCCC20A91F920023D484 /* BBLiveRoomBottomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9585FCC920A91F920023D484 /* BBLiveRoomBottomViewController.m */; };
-		9585FCCD20A91F920023D484 /* BBLiveRoomBottomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9585FCCA20A91F920023D484 /* BBLiveRoomBottomViewController.xib */; };
-		958BECD920A163EA00508ECB /* BBLiveSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 958BECCF20A163EA00508ECB /* BBLiveSDK.framework */; };
-		958BECDE20A163EA00508ECB /* BBLiveSDKTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 958BECDD20A163EA00508ECB /* BBLiveSDKTests.m */; };
 		958BECE020A163EA00508ECB /* BBLiveSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = 958BECD220A163EA00508ECB /* BBLiveSDK.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		958BED3320A16B6F00508ECB /* BBLiveRoomViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 958BED3020A16B6F00508ECB /* BBLiveRoomViewController.h */; };
 		958BED3420A16B6F00508ECB /* BBLiveRoomViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 958BED3120A16B6F00508ECB /* BBLiveRoomViewController.m */; };
-		958BED3520A16B6F00508ECB /* BBLiveRoomViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 958BED3220A16B6F00508ECB /* BBLiveRoomViewController.xib */; };
 		958BED3A20A16D7700508ECB /* BBLiveRoomHandle.h in Headers */ = {isa = PBXBuildFile; fileRef = 958BED3820A16D7700508ECB /* BBLiveRoomHandle.h */; };
 		958BED3B20A16D7700508ECB /* BBLiveRoomHandle.m in Sources */ = {isa = PBXBuildFile; fileRef = 958BED3920A16D7700508ECB /* BBLiveRoomHandle.m */; };
 		958BED8A20A3F0DE00508ECB /* BBLiveUserRoom.h in Headers */ = {isa = PBXBuildFile; fileRef = 958BED8820A3F0DE00508ECB /* BBLiveUserRoom.h */; };
 		958BED8B20A3F0DE00508ECB /* BBLiveUserRoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 958BED8920A3F0DE00508ECB /* BBLiveUserRoom.m */; };
-		958BED8E20A3F17D00508ECB /* BBLiveUserRoomInfoModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 958BED8C20A3F17D00508ECB /* BBLiveUserRoomInfoModel.h */; };
-		958BED8F20A3F17D00508ECB /* BBLiveUserRoomInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 958BED8D20A3F17D00508ECB /* BBLiveUserRoomInfoModel.m */; };
+		959F098320ABDEAB00387069 /* BBLivingModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 959F098120ABDEAB00387069 /* BBLivingModel.h */; };
+		959F098420ABDEAB00387069 /* BBLivingModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 959F098220ABDEAB00387069 /* BBLivingModel.m */; };
+		959F098920ABFD8900387069 /* BBLiveUserEnterRoomRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 959F098720ABFD8900387069 /* BBLiveUserEnterRoomRequest.h */; };
+		959F098A20ABFD8900387069 /* BBLiveUserEnterRoomRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 959F098820ABFD8900387069 /* BBLiveUserEnterRoomRequest.m */; };
+		959F098D20AC012500387069 /* BBLiveRoomDetailInfoModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 959F098B20AC012500387069 /* BBLiveRoomDetailInfoModel.h */; };
+		959F098E20AC012500387069 /* BBLiveRoomDetailInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 959F098C20AC012500387069 /* BBLiveRoomDetailInfoModel.m */; };
+		959F099120AC01B000387069 /* BBLiveListRoomInfoModel.h in Headers */ = {isa = PBXBuildFile; fileRef = 959F098F20AC01B000387069 /* BBLiveListRoomInfoModel.h */; };
+		959F099220AC01B000387069 /* BBLiveListRoomInfoModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 959F099020AC01B000387069 /* BBLiveListRoomInfoModel.m */; };
 		A73FDEA9D4EA510081B2A421 /* libPods-BBLiveSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFEEAC81DADEBFA390EBE45 /* libPods-BBLiveSDK.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		958BECDA20A163EA00508ECB /* PBXContainerItemProxy */ = {
+		954354CB20AC286600774A04 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 958BECC620A163EA00508ECB /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 958BECCE20A163EA00508ECB;
-			remoteInfo = BBLiveSDK;
+			remoteGlobalIDString = 954354C420AC26C600774A04;
+			remoteInfo = BBLiveSDKResource;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -70,6 +80,13 @@
 		95192FD420AAAECE00C96419 /* NSString+BBLiveSDKTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSString+BBLiveSDKTools.h"; sourceTree = "<group>"; };
 		95192FD520AAAECE00C96419 /* NSString+BBLiveSDKTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSString+BBLiveSDKTools.m"; sourceTree = "<group>"; };
 		95192FD820AABF8400C96419 /* BBLiveBaseRequest+Private.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BBLiveBaseRequest+Private.h"; sourceTree = "<group>"; };
+		954354C520AC26C600774A04 /* BBLiveSDKResource.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBLiveSDKResource.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		954354C720AC26C600774A04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		954354CD20AC28AF00774A04 /* Resource.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Resource.xcassets; sourceTree = "<group>"; };
+		954354D320AC420600774A04 /* lingdang@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lingdang@2x.png"; sourceTree = "<group>"; };
+		954354D420AC420600774A04 /* lingdang@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "lingdang@3x.png"; sourceTree = "<group>"; };
+		954354DF20AD10DA00774A04 /* UIImage+LoadSDKResource.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+LoadSDKResource.h"; sourceTree = "<group>"; };
+		954354E020AD10DA00774A04 /* UIImage+LoadSDKResource.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+LoadSDKResource.m"; sourceTree = "<group>"; };
 		9585FC6720A59AA20023D484 /* BBLiveRoomTopViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBLiveRoomTopViewController.h; sourceTree = "<group>"; };
 		9585FC6820A59AA20023D484 /* BBLiveRoomTopViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLiveRoomTopViewController.m; sourceTree = "<group>"; };
 		9585FC6920A59AA20023D484 /* BBLiveRoomTopViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBLiveRoomTopViewController.xib; sourceTree = "<group>"; };
@@ -79,9 +96,6 @@
 		958BECCF20A163EA00508ECB /* BBLiveSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BBLiveSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		958BECD220A163EA00508ECB /* BBLiveSDK.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBLiveSDK.h; sourceTree = "<group>"; };
 		958BECD320A163EA00508ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		958BECD820A163EA00508ECB /* BBLiveSDKTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BBLiveSDKTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		958BECDD20A163EA00508ECB /* BBLiveSDKTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLiveSDKTests.m; sourceTree = "<group>"; };
-		958BECDF20A163EA00508ECB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		958BED3020A16B6F00508ECB /* BBLiveRoomViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBLiveRoomViewController.h; sourceTree = "<group>"; };
 		958BED3120A16B6F00508ECB /* BBLiveRoomViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLiveRoomViewController.m; sourceTree = "<group>"; };
 		958BED3220A16B6F00508ECB /* BBLiveRoomViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBLiveRoomViewController.xib; sourceTree = "<group>"; };
@@ -89,26 +103,31 @@
 		958BED3920A16D7700508ECB /* BBLiveRoomHandle.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLiveRoomHandle.m; sourceTree = "<group>"; };
 		958BED8820A3F0DE00508ECB /* BBLiveUserRoom.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBLiveUserRoom.h; sourceTree = "<group>"; };
 		958BED8920A3F0DE00508ECB /* BBLiveUserRoom.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLiveUserRoom.m; sourceTree = "<group>"; };
-		958BED8C20A3F17D00508ECB /* BBLiveUserRoomInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBLiveUserRoomInfoModel.h; sourceTree = "<group>"; };
-		958BED8D20A3F17D00508ECB /* BBLiveUserRoomInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLiveUserRoomInfoModel.m; sourceTree = "<group>"; };
+		959F098120ABDEAB00387069 /* BBLivingModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBLivingModel.h; sourceTree = "<group>"; };
+		959F098220ABDEAB00387069 /* BBLivingModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLivingModel.m; sourceTree = "<group>"; };
+		959F098720ABFD8900387069 /* BBLiveUserEnterRoomRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBLiveUserEnterRoomRequest.h; sourceTree = "<group>"; };
+		959F098820ABFD8900387069 /* BBLiveUserEnterRoomRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLiveUserEnterRoomRequest.m; sourceTree = "<group>"; };
+		959F098B20AC012500387069 /* BBLiveRoomDetailInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBLiveRoomDetailInfoModel.h; sourceTree = "<group>"; };
+		959F098C20AC012500387069 /* BBLiveRoomDetailInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLiveRoomDetailInfoModel.m; sourceTree = "<group>"; };
+		959F098F20AC01B000387069 /* BBLiveListRoomInfoModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBLiveListRoomInfoModel.h; sourceTree = "<group>"; };
+		959F099020AC01B000387069 /* BBLiveListRoomInfoModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLiveListRoomInfoModel.m; sourceTree = "<group>"; };
 		9AFEEAC81DADEBFA390EBE45 /* libPods-BBLiveSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BBLiveSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D043A82A328145BE61A1B115 /* Pods-BBLiveSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBLiveSDK.release.xcconfig"; path = "../Pods/Target Support Files/Pods-BBLiveSDK/Pods-BBLiveSDK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		954354C220AC26C600774A04 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		958BECCB20A163EA00508ECB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				A73FDEA9D4EA510081B2A421 /* libPods-BBLiveSDK.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		958BECD520A163EA00508ECB /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				958BECD920A163EA00508ECB /* BBLiveSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,9 +155,12 @@
 			isa = PBXGroup;
 			children = (
 				95192FD320AAAE6B00C96419 /* Tools */,
+				959F099320AC02D900387069 /* LivingRoom */,
 				95192FB220A9451A00C96419 /* Networking */,
 				95192FC320AA8EDD00C96419 /* BBLivingListRequest.h */,
 				95192FC220AA8EDD00C96419 /* BBLivingListRequest.m */,
+				959F098120ABDEAB00387069 /* BBLivingModel.h */,
+				959F098220ABDEAB00387069 /* BBLivingModel.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -162,15 +184,28 @@
 			children = (
 				95192FD420AAAECE00C96419 /* NSString+BBLiveSDKTools.h */,
 				95192FD520AAAECE00C96419 /* NSString+BBLiveSDKTools.m */,
+				954354DF20AD10DA00774A04 /* UIImage+LoadSDKResource.h */,
+				954354E020AD10DA00774A04 /* UIImage+LoadSDKResource.m */,
 			);
 			path = Tools;
+			sourceTree = "<group>";
+		};
+		954354C620AC26C600774A04 /* BBLiveSDKResource */ = {
+			isa = PBXGroup;
+			children = (
+				954354D320AC420600774A04 /* lingdang@2x.png */,
+				954354D420AC420600774A04 /* lingdang@3x.png */,
+				954354C720AC26C600774A04 /* Info.plist */,
+				954354CD20AC28AF00774A04 /* Resource.xcassets */,
+			);
+			path = BBLiveSDKResource;
 			sourceTree = "<group>";
 		};
 		958BECC520A163EA00508ECB = {
 			isa = PBXGroup;
 			children = (
 				958BECD120A163EA00508ECB /* BBLiveSDK */,
-				958BECDC20A163EA00508ECB /* BBLiveSDKTests */,
+				954354C620AC26C600774A04 /* BBLiveSDKResource */,
 				958BECD020A163EA00508ECB /* Products */,
 				1B251E98F112F98AC7038F24 /* Pods */,
 				5FB7F25818D3512F022C0AE9 /* Frameworks */,
@@ -181,7 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				958BECCF20A163EA00508ECB /* BBLiveSDK.framework */,
-				958BECD820A163EA00508ECB /* BBLiveSDKTests.xctest */,
+				954354C520AC26C600774A04 /* BBLiveSDKResource.bundle */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -195,12 +230,48 @@
 				95192FCC20AAA4BA00C96419 /* BBLiveManager.m */,
 				95192FC720AA92D000C96419 /* BBLiveConfig.h */,
 				95192FC820AA92D000C96419 /* BBLiveConfig.m */,
-				958BED8C20A3F17D00508ECB /* BBLiveUserRoomInfoModel.h */,
-				958BED8D20A3F17D00508ECB /* BBLiveUserRoomInfoModel.m */,
-				958BED8820A3F0DE00508ECB /* BBLiveUserRoom.h */,
-				958BED8920A3F0DE00508ECB /* BBLiveUserRoom.m */,
 				958BED3820A16D7700508ECB /* BBLiveRoomHandle.h */,
 				958BED3920A16D7700508ECB /* BBLiveRoomHandle.m */,
+				958BECD320A163EA00508ECB /* Info.plist */,
+			);
+			path = BBLiveSDK;
+			sourceTree = "<group>";
+		};
+		959F099320AC02D900387069 /* LivingRoom */ = {
+			isa = PBXGroup;
+			children = (
+				959F099620AC032000387069 /* Controller */,
+				959F099520AC031A00387069 /* View */,
+				959F099420AC030D00387069 /* Model */,
+			);
+			path = LivingRoom;
+			sourceTree = "<group>";
+		};
+		959F099420AC030D00387069 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				959F098720ABFD8900387069 /* BBLiveUserEnterRoomRequest.h */,
+				959F098820ABFD8900387069 /* BBLiveUserEnterRoomRequest.m */,
+				959F098F20AC01B000387069 /* BBLiveListRoomInfoModel.h */,
+				959F099020AC01B000387069 /* BBLiveListRoomInfoModel.m */,
+				959F098B20AC012500387069 /* BBLiveRoomDetailInfoModel.h */,
+				959F098C20AC012500387069 /* BBLiveRoomDetailInfoModel.m */,
+				958BED8820A3F0DE00508ECB /* BBLiveUserRoom.h */,
+				958BED8920A3F0DE00508ECB /* BBLiveUserRoom.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		959F099520AC031A00387069 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		959F099620AC032000387069 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
 				958BED3020A16B6F00508ECB /* BBLiveRoomViewController.h */,
 				958BED3120A16B6F00508ECB /* BBLiveRoomViewController.m */,
 				958BED3220A16B6F00508ECB /* BBLiveRoomViewController.xib */,
@@ -210,18 +281,8 @@
 				9585FCC820A91F920023D484 /* BBLiveRoomBottomViewController.h */,
 				9585FCC920A91F920023D484 /* BBLiveRoomBottomViewController.m */,
 				9585FCCA20A91F920023D484 /* BBLiveRoomBottomViewController.xib */,
-				958BECD320A163EA00508ECB /* Info.plist */,
 			);
-			path = BBLiveSDK;
-			sourceTree = "<group>";
-		};
-		958BECDC20A163EA00508ECB /* BBLiveSDKTests */ = {
-			isa = PBXGroup;
-			children = (
-				958BECDD20A163EA00508ECB /* BBLiveSDKTests.m */,
-				958BECDF20A163EA00508ECB /* Info.plist */,
-			);
-			path = BBLiveSDKTests;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,10 +294,13 @@
 			files = (
 				95192FCD20AAA4BA00C96419 /* BBLiveManager.h in Headers */,
 				9585FCCB20A91F920023D484 /* BBLiveRoomBottomViewController.h in Headers */,
+				959F099120AC01B000387069 /* BBLiveListRoomInfoModel.h in Headers */,
 				95192FDA20AABF8400C96419 /* BBLiveBaseRequest+Private.h in Headers */,
+				954354E120AD10DA00774A04 /* UIImage+LoadSDKResource.h in Headers */,
+				959F098320ABDEAB00387069 /* BBLivingModel.h in Headers */,
+				959F098920ABFD8900387069 /* BBLiveUserEnterRoomRequest.h in Headers */,
 				95192FB920A94F5600C96419 /* BBLiveNetworkAgent.h in Headers */,
 				95192FB520A9456E00C96419 /* BBLiveBaseRequest.h in Headers */,
-				958BED8E20A3F17D00508ECB /* BBLiveUserRoomInfoModel.h in Headers */,
 				958BED3320A16B6F00508ECB /* BBLiveRoomViewController.h in Headers */,
 				9585FC6A20A59AA20023D484 /* BBLiveRoomTopViewController.h in Headers */,
 				958BECE020A163EA00508ECB /* BBLiveSDK.h in Headers */,
@@ -245,6 +309,7 @@
 				95192FD120AAAA5E00C96419 /* BBLiveBaseRequest+Common.h in Headers */,
 				95192FC920AA92D000C96419 /* BBLiveConfig.h in Headers */,
 				958BED3A20A16D7700508ECB /* BBLiveRoomHandle.h in Headers */,
+				959F098D20AC012500387069 /* BBLiveRoomDetailInfoModel.h in Headers */,
 				95192FD620AAAECE00C96419 /* NSString+BBLiveSDKTools.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +317,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		954354C420AC26C600774A04 /* BBLiveSDKResource */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 954354C820AC26C600774A04 /* Build configuration list for PBXNativeTarget "BBLiveSDKResource" */;
+			buildPhases = (
+				954354C120AC26C600774A04 /* Sources */,
+				954354C220AC26C600774A04 /* Frameworks */,
+				954354C320AC26C600774A04 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = BBLiveSDKResource;
+			productName = BBLiveSDKResource;
+			productReference = 954354C520AC26C600774A04 /* BBLiveSDKResource.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		958BECCE20A163EA00508ECB /* BBLiveSDK */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 958BECE320A163EA00508ECB /* Build configuration list for PBXNativeTarget "BBLiveSDK" */;
@@ -266,29 +348,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				954354CC20AC286600774A04 /* PBXTargetDependency */,
 			);
 			name = BBLiveSDK;
 			productName = BBLiveSDK;
 			productReference = 958BECCF20A163EA00508ECB /* BBLiveSDK.framework */;
 			productType = "com.apple.product-type.framework";
-		};
-		958BECD720A163EA00508ECB /* BBLiveSDKTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 958BECE620A163EA00508ECB /* Build configuration list for PBXNativeTarget "BBLiveSDKTests" */;
-			buildPhases = (
-				958BECD420A163EA00508ECB /* Sources */,
-				958BECD520A163EA00508ECB /* Frameworks */,
-				958BECD620A163EA00508ECB /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				958BECDB20A163EA00508ECB /* PBXTargetDependency */,
-			);
-			name = BBLiveSDKTests;
-			productName = BBLiveSDKTests;
-			productReference = 958BECD820A163EA00508ECB /* BBLiveSDKTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -299,10 +364,10 @@
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = linzuhan;
 				TargetAttributes = {
-					958BECCE20A163EA00508ECB = {
+					954354C420AC26C600774A04 = {
 						CreatedOnToolsVersion = 9.3;
 					};
-					958BECD720A163EA00508ECB = {
+					958BECCE20A163EA00508ECB = {
 						CreatedOnToolsVersion = 9.3;
 					};
 				};
@@ -320,26 +385,30 @@
 			projectRoot = "";
 			targets = (
 				958BECCE20A163EA00508ECB /* BBLiveSDK */,
-				958BECD720A163EA00508ECB /* BBLiveSDKTests */,
+				954354C420AC26C600774A04 /* BBLiveSDKResource */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		954354C320AC26C600774A04 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				954354D220AC38AE00774A04 /* BBLiveRoomBottomViewController.xib in Resources */,
+				954354D120AC38A900774A04 /* BBLiveRoomTopViewController.xib in Resources */,
+				954354D020AC38A000774A04 /* BBLiveRoomViewController.xib in Resources */,
+				954354CE20AC28AF00774A04 /* Resource.xcassets in Resources */,
+				954354D520AC420600774A04 /* lingdang@2x.png in Resources */,
+				954354D620AC420600774A04 /* lingdang@3x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		958BECCD20A163EA00508ECB /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				958BED3520A16B6F00508ECB /* BBLiveRoomViewController.xib in Resources */,
-				9585FC6C20A59AA20023D484 /* BBLiveRoomTopViewController.xib in Resources */,
-				9585FCCD20A91F920023D484 /* BBLiveRoomBottomViewController.xib in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		958BECD620A163EA00508ECB /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
+				954354DD20AC442600774A04 /* BBLiveSDKResource.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -385,10 +454,18 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		954354C120AC26C600774A04 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		958BECCA20A163EA00508ECB /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				954354E220AD10DA00774A04 /* UIImage+LoadSDKResource.m in Sources */,
 				95192FC420AA8EDD00C96419 /* BBLivingListRequest.m in Sources */,
 				95192FD220AAAA5E00C96419 /* BBLiveBaseRequest+Common.m in Sources */,
 				9585FCCC20A91F920023D484 /* BBLiveRoomBottomViewController.m in Sources */,
@@ -396,34 +473,73 @@
 				95192FD720AAAECE00C96419 /* NSString+BBLiveSDKTools.m in Sources */,
 				958BED3B20A16D7700508ECB /* BBLiveRoomHandle.m in Sources */,
 				95192FCE20AAA4BA00C96419 /* BBLiveManager.m in Sources */,
-				958BED8F20A3F17D00508ECB /* BBLiveUserRoomInfoModel.m in Sources */,
+				959F099220AC01B000387069 /* BBLiveListRoomInfoModel.m in Sources */,
+				959F098E20AC012500387069 /* BBLiveRoomDetailInfoModel.m in Sources */,
 				95192FBA20A94F5600C96419 /* BBLiveNetworkAgent.m in Sources */,
 				9585FC6B20A59AA20023D484 /* BBLiveRoomTopViewController.m in Sources */,
+				959F098420ABDEAB00387069 /* BBLivingModel.m in Sources */,
 				958BED8B20A3F0DE00508ECB /* BBLiveUserRoom.m in Sources */,
 				958BED3420A16B6F00508ECB /* BBLiveRoomViewController.m in Sources */,
 				95192FCA20AA92D000C96419 /* BBLiveConfig.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		958BECD420A163EA00508ECB /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				958BECDE20A163EA00508ECB /* BBLiveSDKTests.m in Sources */,
+				959F098A20ABFD8900387069 /* BBLiveUserEnterRoomRequest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		958BECDB20A163EA00508ECB /* PBXTargetDependency */ = {
+		954354CC20AC286600774A04 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 958BECCE20A163EA00508ECB /* BBLiveSDK */;
-			targetProxy = 958BECDA20A163EA00508ECB /* PBXContainerItemProxy */;
+			target = 954354C420AC26C600774A04 /* BBLiveSDKResource */;
+			targetProxy = 954354CB20AC286600774A04 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		954354C920AC26C600774A04 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PF3BSY7RH3;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = BBLiveSDKResource/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bobei.BBLiveSDKResource;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		954354CA20AC26C600774A04 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = PF3BSY7RH3;
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = BBLiveSDKResource/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				ONLY_ACTIVE_ARCH = NO;
+				PRODUCT_BUNDLE_IDENTIFIER = com.bobei.BBLiveSDKResource;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
 		958BECE120A163EA00508ECB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -560,10 +676,12 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
+				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bobei.BBLiveSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/BBLiveSDK/Classes\"/**";
 			};
 			name = Debug;
 		};
@@ -587,50 +705,27 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
+				ONLY_ACTIVE_ARCH = NO;
 				PRODUCT_BUNDLE_IDENTIFIER = com.bobei.BBLiveSDK;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		958BECE720A163EA00508ECB /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PF3BSY7RH3;
-				INFOPLIST_FILE = BBLiveSDKTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bobei.BBLiveSDKTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		958BECE820A163EA00508ECB /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = PF3BSY7RH3;
-				INFOPLIST_FILE = BBLiveSDKTests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.bobei.BBLiveSDKTests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/BBLiveSDK/Classes\"/**";
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		954354C820AC26C600774A04 /* Build configuration list for PBXNativeTarget "BBLiveSDKResource" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				954354C920AC26C600774A04 /* Debug */,
+				954354CA20AC26C600774A04 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		958BECC920A163EA00508ECB /* Build configuration list for PBXProject "BBLiveSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -645,15 +740,6 @@
 			buildConfigurations = (
 				958BECE420A163EA00508ECB /* Debug */,
 				958BECE520A163EA00508ECB /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		958BECE620A163EA00508ECB /* Build configuration list for PBXNativeTarget "BBLiveSDKTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				958BECE720A163EA00508ECB /* Debug */,
-				958BECE820A163EA00508ECB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
