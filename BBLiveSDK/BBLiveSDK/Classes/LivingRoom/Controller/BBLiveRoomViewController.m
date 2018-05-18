@@ -17,7 +17,7 @@
 #import "BBLiveListRoomInfoModel.h"
 #import "BBLivePlayer.h"
 
-@interface BBLiveRoomViewController ()
+@interface BBLiveRoomViewController ()<BBLiveUserRoomDelegate>
 
 // UI
 @property (weak, nonatomic) IBOutlet UIView *playerContentView;
@@ -30,6 +30,7 @@
 
 // DATA
 @property (strong, nonatomic) BBLivePlayer *livePlayer;
+@property (nonatomic, strong) BBLiveUserRoom *liveUserRoom;
 
 @end
 
@@ -38,15 +39,6 @@
 - (void)dealloc
 {
     
-}
-
-- (BBLiveUserRoom *)liveUserRoom
-{
-    if (!_liveUserRoom) {
-        _liveUserRoom = [[BBLiveUserRoom alloc] init];
-    }
-    
-    return _liveUserRoom;
 }
 
 - (IBAction)backBtnClicked:(UIButton *)sender
@@ -59,33 +51,22 @@
     [super viewDidLoad];
     
     
+    [self setupUI];
     
-    
+    [self enterLiveUserRoom];
 }
 
 - (void)enterLiveUserRoom
 {
+    self.liveUserRoom = [[BBLiveUserRoom alloc] initLiveUserRoomWithInfo:self.roomInfoModel];
+    self.liveUserRoom.delegate = self;
     [self.liveUserRoom enterLiveUserRoom];
-    @weakify(self)
-    [self.liveUserRoom setEnterLiveRoomCompleteBlock:^{
-        @strongify(self)
-        
-        [self.topViewController refreshTopViewWithLiveRoomDetailInfoModel:self.liveUserRoom.roomDetailInfo];
-        
-    }];
-    
-    [self.liveUserRoom setLiveRoomAudienceRequestCompleteBlock:^{
-        @strongify(self)
-        
-        [self.topViewController refreshAudienceCollectionViewWithList:self.liveUserRoom.audienceList];
-        
-    }];
 }
 
 - (void)setupUI
 {
     //
-    self.livePlayer = [BBLivePlayer livePlayerWithUrl:self.liveUserRoom.roomInfo.livingURL
+    self.livePlayer = [BBLivePlayer livePlayerWithUrl:self.roomInfoModel.livingURL
                                     playerContentView:self.playerContentView];
     [self.livePlayer play];
     
@@ -118,6 +99,18 @@
     }
     
     return _bottomViewController;
+}
+
+#pragma mark - BBLiveUserRoomDelegate
+
+- (void)liveRoomEnterCompleteWithDetailInfoModel:(BBLiveRoomDetailInfoModel *)detailInfoModel
+{
+    [self.topViewController refreshTopViewWithLiveRoomDetailInfoModel:self.liveUserRoom.roomDetailInfo];
+}
+
+- (void)liveRoomAudienceListRequestCompleteWithAudienceList:(NSArray<__kindof BBLiveAudienceModel *> *)audienceList
+{
+    [self.topViewController refreshAudienceCollectionViewWithList:self.liveUserRoom.audienceList];
 }
 
 - (void)didReceiveMemoryWarning {

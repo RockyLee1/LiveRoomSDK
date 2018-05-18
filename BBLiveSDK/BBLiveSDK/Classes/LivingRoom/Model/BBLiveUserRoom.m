@@ -18,12 +18,27 @@
 
 @interface BBLiveUserRoom ()
 
+// 进直播间前的直播间基本信息
+@property (nonatomic, strong) BBLiveListRoomInfoModel *roomInfo;
+// 直播间详细信息
+@property (nonatomic, strong) BBLiveRoomDetailInfoModel *roomDetailInfo;
+
 @property (nonatomic, strong) BBLiveUserEnterRoomRequest *enterRoomRequest;
 @property (nonatomic, strong) BBLiveRoomAudienceListRequest *audienceListRequest;
 
 @end
 
 @implementation BBLiveUserRoom
+
+- (instancetype)initLiveUserRoomWithInfo:(BBLiveListRoomInfoModel *)roomInfo
+{
+    self = [super init];
+    if (self) {
+        _roomInfo = roomInfo;
+    }
+    
+    return self;
+}
 
 - (void)enterLiveUserRoom
 {
@@ -42,8 +57,8 @@
         self.roomDetailInfo = detailInfoModel;
         
         dispatch_async(dispatch_get_main_queue(), ^{
-            if (self.enterLiveRoomCompleteBlock) {
-                self.enterLiveRoomCompleteBlock();
+            if (self.delegate && [self.delegate respondsToSelector:@selector(liveRoomEnterCompleteWithDetailInfoModel:)]) {
+                [self.delegate liveRoomEnterCompleteWithDetailInfoModel:detailInfoModel];
             }
         });
         
@@ -55,8 +70,8 @@
             
             self.audienceList = [self.audienceListRequest.audienceList mutableCopy];
             dispatch_async(dispatch_get_main_queue(), ^{
-                if (self.liveRoomAudienceRequestCompleteBlock) {
-                    self.liveRoomAudienceRequestCompleteBlock();
+                if (self.delegate && [self.delegate respondsToSelector:@selector(liveRoomAudienceListRequestCompleteWithAudienceList:)]) {
+                    [self.delegate liveRoomAudienceListRequestCompleteWithAudienceList:self.audienceList];
                 }
             });
         } failure:^(__kindof BBLiveBaseRequest *request) {

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "BBLive.h"
 
 @interface AppDelegate ()
 
@@ -18,6 +19,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+    [BBLive initBBLiveSDK];
+    
     return YES;
 }
 

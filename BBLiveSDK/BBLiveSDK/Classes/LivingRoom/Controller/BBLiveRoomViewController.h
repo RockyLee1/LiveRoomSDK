@@ -8,11 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "BBLiveUserRoom.h"
+#import "BBLiveListRoomInfoModel.h"
 
 @interface BBLiveRoomViewController : UIViewController
 
-@property (nonatomic, strong) BBLiveUserRoom *liveUserRoom;
-
-@property (nonatomic, strong) NSString *livingRoomURLString;
+@property (nonatomic, strong) BBLiveListRoomInfoModel *roomInfoModel;
 
 @end
