@@ -37,7 +37,7 @@
 
 - (NSString *)baseURLString
 {
-    return @"http://dev.91banban.com/zbapp/";
+    return @"";
 }
 
 - (NSString *)requestPath

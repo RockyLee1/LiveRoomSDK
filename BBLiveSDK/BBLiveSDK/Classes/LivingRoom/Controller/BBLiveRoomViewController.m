@@ -43,6 +43,8 @@
 
 - (IBAction)backBtnClicked:(UIButton *)sender
 {
+    [self.liveUserRoom leaveLiveUserRoom];
+    
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 

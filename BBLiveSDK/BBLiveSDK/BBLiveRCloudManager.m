@@ -11,7 +11,9 @@
 #import "BBLiveRCloudTokenRequest.h"
 
 @interface BBLiveRCloudManager ()<
-RCIMClientReceiveMessageDelegate
+RCIMClientReceiveMessageDelegate,
+RCConnectionStatusChangeDelegate,
+RCChatRoomStatusDelegate
 >
 
 @property (nonatomic, strong) BBLiveRCloudTokenRequest *RCloudTokenRequest;
@@ -71,7 +73,7 @@ RCIMClientReceiveMessageDelegate
     [self requestRCloudTokenWithCompleteBlock:^(BOOL isSuccess, NSString *token) {
         if (isSuccess) {
             
-            
+            [[RCIMClient sharedRCIMClient] setReceiveMessageDelegate:self object:nil];
             [[RCIMClient sharedRCIMClient] connectWithToken:token
                                                     success:^(NSString *userId) {
                                                         if (successBlock) {
@@ -92,15 +94,104 @@ RCIMClientReceiveMessageDelegate
     }];
 }
 
+- (void)joinChatRoomWithRoomId:(NSString *)roomId
+       chatRoomMessageDelegate:(id<BBLiveRCloudManagerChatRoomMessageDelegate>)chatRoomMessageDelegate
+                  successBlock:(void (^)(void))successBlock
+                  failureBlock:(void (^)(void))failureBlock
+{
+    self.chatRoomMessageDelegate = chatRoomMessageDelegate;
+    
+    [[RCIMClient sharedRCIMClient] setChatRoomStatusDelegate:self];
+    [[RCIMClient sharedRCIMClient] joinChatRoom:roomId
+                                   messageCount:-1
+                                        success:^{
+                                            if (successBlock) {
+                                                successBlock();
+                                            }
+                                        } error:^(RCErrorCode status) {
+                                            if (failureBlock) {
+                                                failureBlock();
+                                            }
+                                        }];
+}
+
+- (void)quitChatRoomWithRoomId:(NSString *)roomId
+                  successBlock:(void (^)(void))successBlock
+                  failureBlock:(void (^)(void))failureBlock
+{
+    self.chatRoomMessageDelegate = nil;
+    [[RCIMClient sharedRCIMClient] quitChatRoom:roomId
+                                        success:^{
+                                            if (successBlock) {
+                                                successBlock();
+                                            }
+                                        } error:^(RCErrorCode status) {
+                                            if (failureBlock) {
+                                                failureBlock();
+                                            }
+                                        }];
+}
+
 #pragma mark - RCIMClientReceiveMessageDelegate
 
 - (void)onReceived:(RCMessage *)message left:(int)nLeft object:(id)object
 {
+    RCMessageContent *contentMessage = message.content;
+    if ([contentMessage isKindOfClass:[RCTextMessage class]]) {
+        RCTextMessage *textMessage = (RCTextMessage *)contentMessage;
+        
+        NSString *extra = textMessage.extra;
+        NSString *contentJson = textMessage.content;
+        
+        NSLog(@"消息type ---%@---",extra);
+        NSLog(@"消息体 -------%@",contentJson);
+
+        NSData *jsonData = [contentJson dataUsingEncoding:NSUTF8StringEncoding];
+        
+        NSError *error = nil;
+        id content = [NSJSONSerialization JSONObjectWithData:jsonData
+                                                     options:NSJSONReadingAllowFragments
+                                                       error:&error];
+        if (!error
+            && content
+            && [content isKindOfClass:[NSDictionary class]]) {
+            if (self.chatRoomMessageDelegate
+                && [self.chatRoomMessageDelegate respondsToSelector:@selector(BBLiveChatRoomMessageDidReceivedWithMessageType:messageDic:)]) {
+                [self.chatRoomMessageDelegate BBLiveChatRoomMessageDidReceivedWithMessageType:extra messageDic:content];
+            }
+        }
+
+        
+    }
+}
+
+#pragma mark - RCConnectionStatusChangeDelegate
+
+- (void)onConnectionStatusChanged:(RCConnectionStatus)status
+{
     
 }
 
-#pragma mark -
+#pragma mark - RCChatRoomStatusDelegate
 
+- (void)onChatRoomJoining:(NSString *)chatroomId
+{
+    
+}
 
+- (void)onChatRoomJoined:(NSString *)chatroomId
+{
+    
+}
+
+- (void)onChatRoomJoinFailed:(NSString *)chatroomId errorCode:(RCErrorCode)errorCode
+{
+    
+}
+
+- (void)onChatRoomQuited:(NSString *)chatroomId
+{
+    
+}
 
 @end

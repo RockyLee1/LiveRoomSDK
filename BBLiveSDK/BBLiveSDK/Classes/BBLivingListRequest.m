@@ -42,14 +42,16 @@
     
     NSArray *dataArray = [responseDic objectForKey:@"data"];
     
-    NSMutableArray *tmpArray = [NSMutableArray array];
-    for (NSDictionary *dic in dataArray) {
-        BBLivingModel *model = [BBLivingModel mj_objectWithKeyValues:dic];
+    if ([dataArray isKindOfClass:[NSArray class]]) {
+        NSMutableArray *tmpArray = [NSMutableArray array];
+        for (NSDictionary *dic in dataArray) {
+            BBLivingModel *model = [BBLivingModel mj_objectWithKeyValues:dic];
+            
+            [tmpArray addObject:model];
+        }
         
-        [tmpArray addObject:model];
+        self.list = [tmpArray copy];
     }
-    
-    self.list = [tmpArray copy];
 }
 
 @end

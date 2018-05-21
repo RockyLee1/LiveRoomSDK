@@ -12,13 +12,30 @@
 
 @end
 
+@protocol BBLiveRCloudManagerChatRoomMessageDelegate <NSObject>
+
+- (void)BBLiveChatRoomMessageDidReceivedWithMessageType:(NSString *)messageType
+                                             messageDic:(NSDictionary *)messageDic;
+
+@end
+
 @interface BBLiveRCloudManager : NSObject
 
 @property (nonatomic, weak) id <BBLiveRCloudManagerMessageDelegate>messageDelegate;
+@property (nonatomic, weak) id <BBLiveRCloudManagerChatRoomMessageDelegate>chatRoomMessageDelegate;
 
 + (instancetype)shareManager;
 
 - (void)connectRCloudWithSuccessBlock:(void (^)(NSString *userId))successBlock
                          failureBlock:(void (^)(void))failureBlock;
+
+- (void)joinChatRoomWithRoomId:(NSString *)roomId
+       chatRoomMessageDelegate:(id<BBLiveRCloudManagerChatRoomMessageDelegate>)chatRoomMessageDelegate
+                  successBlock:(void (^)(void))successBlock
+                  failureBlock:(void (^)(void))failureBlock;
+
+- (void)quitChatRoomWithRoomId:(NSString *)roomId
+                  successBlock:(void (^)(void))successBlock
+                  failureBlock:(void (^)(void))failureBlock;
 
 @end

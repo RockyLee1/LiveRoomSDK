@@ -11,12 +11,15 @@
 #import "BBLiveRoomDetailInfoModel.h"
 #import "BBLiveUserEnterRoomRequest.h"
 #import "BBLiveRoomAudienceListRequest.h"
+#import "BBLiveUserLeaveRoomRequest.h"
 
 #import <AFNetworking/AFNetworking.h>
 #import <RongIMLib/RCIMClient.h>
 #import <libextobjc/EXTScope.h>
 
-@interface BBLiveUserRoom ()
+#import "BBLiveRCloudManager.h"
+
+@interface BBLiveUserRoom ()<BBLiveRCloudManagerChatRoomMessageDelegate>
 
 // 进直播间前的直播间基本信息
 @property (nonatomic, strong) BBLiveListRoomInfoModel *roomInfo;
@@ -25,6 +28,8 @@
 
 @property (nonatomic, strong) BBLiveUserEnterRoomRequest *enterRoomRequest;
 @property (nonatomic, strong) BBLiveRoomAudienceListRequest *audienceListRequest;
+
+@property (nonatomic, strong) BBLiveUserLeaveRoomRequest *leaveRoomRequest;
 
 @end
 
@@ -47,6 +52,7 @@
 
 - (void)enterLiveUserRoomWithRoomInfo:(BBLiveListRoomInfoModel *)roomInfo
 {
+    // 服务器进房间
     self.enterRoomRequest = [[BBLiveUserEnterRoomRequest alloc] init];
     self.enterRoomRequest.roomId = roomInfo.roomId;
     
@@ -82,16 +88,94 @@
     }];
     
     // 融云进房间
-    [[RCIMClient sharedRCIMClient] joinChatRoom:@""
-                                   messageCount:-1
-                                        success:^{
-                                            
-                                        } error:^(RCErrorCode status) {
-                                            
-                                        }];
+    [[BBLiveRCloudManager shareManager] joinChatRoomWithRoomId:roomInfo.roomId
+                                       chatRoomMessageDelegate:self
+                                                  successBlock:^{
+                                                      
+                                                  } failureBlock:^{
+                                                      
+                                                  }];
 }
 
+- (void)leaveLiveUserRoom
+{
+    // 服务器退房
+    if (!self.leaveRoomRequest) {
+        self.leaveRoomRequest = [[BBLiveUserLeaveRoomRequest alloc] init];
+    }
+    [self.leaveRoomRequest leaveRoomRequestWithRoomId:_roomInfo.roomId
+                                         successBlock:^{
+                                             
+                                         } failureBlock:^{
+                                             
+                                         }];
+    
+    // 融云退房
+    [[BBLiveRCloudManager shareManager] quitChatRoomWithRoomId:_roomInfo.roomId
+                                                  successBlock:^{
+                                                      
+                                                  } failureBlock:^{
+                                                      
+                                                  }];
+    
+}
 
+#pragma mark - BBLiveRCloudManagerChatRoomMessageDelegate
 
+- (void)BBLiveChatRoomMessageDidReceivedWithMessageType:(NSString *)messageType
+                                             messageDic:(NSDictionary *)messageDic
+{
+    BBLiveRoomMessageType type = [messageType integerValue];
+    
+    switch (type) {
+        case BBLiveRoomMessageTypeChatRoomNormalMsg:
+            
+            break;
+            
+        case BBLiveRoomMessageTypeEnterRoomMsg:
+            
+            break;
+            
+        case BBLiveRoomMessageTypeLeaveRoomMsg:
+            
+            break;
+            
+        case BBLiveRoomMessageTypeInviteMicConnect:
+            
+            break;
+            
+        case BBLiveRoomMessageTypeInviteMicConnectConfirm:
+            
+            break;
+            
+        case BBLiveRoomMessageTypeShutUpMsg:
+            
+            break;
+        case BBLiveRoomMessageTypeSendGift:
+            
+            break;
+        case BBLiveRoomMessageTypePrizeMsg:
+            
+            break;
+        case BBLiveRoomMessageTypeLevelUpMsg:
+            
+            break;
+        case BBLiveRoomMessageTypeRanking:
+            
+            break;
+        case BBLiveRoomMessageTypeTrack:
+            
+            break;
+        case BBLiveRoomMessageTypeAttention:
+            
+            break;
+        case BBLiveRoomMessageTypeFrontOrBack:
+            
+            break;
+        default:
+            break;
+    }
+    
+}
 
 @end

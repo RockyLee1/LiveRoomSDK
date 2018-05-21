@@ -64,6 +64,8 @@
 		95D5738E20AE77F000FB7210 /* BBLiveRCloudManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D5738C20AE77F000FB7210 /* BBLiveRCloudManager.m */; };
 		95D5739120AE819300FB7210 /* BBLive.h in Headers */ = {isa = PBXBuildFile; fileRef = 95D5738F20AE819300FB7210 /* BBLive.h */; };
 		95D5739220AE819300FB7210 /* BBLive.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D5739020AE819300FB7210 /* BBLive.m */; };
+		95D5739820B2B60500FB7210 /* BBLiveUserLeaveRoomRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 95D5739620B2B60500FB7210 /* BBLiveUserLeaveRoomRequest.h */; };
+		95D5739920B2B60500FB7210 /* BBLiveUserLeaveRoomRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D5739720B2B60500FB7210 /* BBLiveUserLeaveRoomRequest.m */; };
 		A73FDEA9D4EA510081B2A421 /* libPods-BBLiveSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFEEAC81DADEBFA390EBE45 /* libPods-BBLiveSDK.a */; };
 /* End PBXBuildFile section */
 
@@ -139,6 +141,8 @@
 		95D5738C20AE77F000FB7210 /* BBLiveRCloudManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLiveRCloudManager.m; sourceTree = "<group>"; };
 		95D5738F20AE819300FB7210 /* BBLive.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBLive.h; sourceTree = "<group>"; };
 		95D5739020AE819300FB7210 /* BBLive.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLive.m; sourceTree = "<group>"; };
+		95D5739620B2B60500FB7210 /* BBLiveUserLeaveRoomRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBLiveUserLeaveRoomRequest.h; sourceTree = "<group>"; };
+		95D5739720B2B60500FB7210 /* BBLiveUserLeaveRoomRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLiveUserLeaveRoomRequest.m; sourceTree = "<group>"; };
 		9AFEEAC81DADEBFA390EBE45 /* libPods-BBLiveSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BBLiveSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D043A82A328145BE61A1B115 /* Pods-BBLiveSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBLiveSDK.release.xcconfig"; path = "../Pods/Target Support Files/Pods-BBLiveSDK/Pods-BBLiveSDK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -182,9 +186,9 @@
 		95192FB120A9450D00C96419 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				95192FB220A9451A00C96419 /* Networking */,
 				95192FD320AAAE6B00C96419 /* Tools */,
 				959F099320AC02D900387069 /* LivingRoom */,
-				95192FB220A9451A00C96419 /* Networking */,
 				95192FC320AA8EDD00C96419 /* BBLivingListRequest.h */,
 				95192FC220AA8EDD00C96419 /* BBLivingListRequest.m */,
 				959F098120ABDEAB00387069 /* BBLivingModel.h */,
@@ -274,6 +278,7 @@
 		959F099320AC02D900387069 /* LivingRoom */ = {
 			isa = PBXGroup;
 			children = (
+				95D5739A20B2C2DE00FB7210 /* Request */,
 				959F099620AC032000387069 /* Controller */,
 				959F099520AC031A00387069 /* View */,
 				959F099420AC030D00387069 /* Model */,
@@ -284,12 +289,6 @@
 		959F099420AC030D00387069 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				959F098720ABFD8900387069 /* BBLiveUserEnterRoomRequest.h */,
-				959F098820ABFD8900387069 /* BBLiveUserEnterRoomRequest.m */,
-				954354F020AD758100774A04 /* BBLiveRoomAudienceListRequest.h */,
-				954354F120AD758100774A04 /* BBLiveRoomAudienceListRequest.m */,
-				95D5738720AE769B00FB7210 /* BBLiveRCloudTokenRequest.h */,
-				95D5738820AE769B00FB7210 /* BBLiveRCloudTokenRequest.m */,
 				954354F420AD76FE00774A04 /* BBLiveAudienceModel.h */,
 				954354F520AD76FE00774A04 /* BBLiveAudienceModel.m */,
 				959F098F20AC01B000387069 /* BBLiveListRoomInfoModel.h */,
@@ -327,6 +326,21 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		95D5739A20B2C2DE00FB7210 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				959F098720ABFD8900387069 /* BBLiveUserEnterRoomRequest.h */,
+				959F098820ABFD8900387069 /* BBLiveUserEnterRoomRequest.m */,
+				95D5739620B2B60500FB7210 /* BBLiveUserLeaveRoomRequest.h */,
+				95D5739720B2B60500FB7210 /* BBLiveUserLeaveRoomRequest.m */,
+				954354F020AD758100774A04 /* BBLiveRoomAudienceListRequest.h */,
+				954354F120AD758100774A04 /* BBLiveRoomAudienceListRequest.m */,
+				95D5738720AE769B00FB7210 /* BBLiveRCloudTokenRequest.h */,
+				95D5738820AE769B00FB7210 /* BBLiveRCloudTokenRequest.m */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -354,6 +368,7 @@
 				95D5738920AE769B00FB7210 /* BBLiveRCloudTokenRequest.h in Headers */,
 				95D5739120AE819300FB7210 /* BBLive.h in Headers */,
 				95192FD120AAAA5E00C96419 /* BBLiveBaseRequest+Common.h in Headers */,
+				95D5739820B2B60500FB7210 /* BBLiveUserLeaveRoomRequest.h in Headers */,
 				95D5738D20AE77F000FB7210 /* BBLiveRCloudManager.h in Headers */,
 				95192FC920AA92D000C96419 /* BBLiveConfig.h in Headers */,
 				9510AB0C20AD9BD100EF201A /* UIViewController+LoadSDKResource.h in Headers */,
@@ -528,6 +543,7 @@
 				959F099220AC01B000387069 /* BBLiveListRoomInfoModel.m in Sources */,
 				954354F320AD758100774A04 /* BBLiveRoomAudienceListRequest.m in Sources */,
 				959F098E20AC012500387069 /* BBLiveRoomDetailInfoModel.m in Sources */,
+				95D5739920B2B60500FB7210 /* BBLiveUserLeaveRoomRequest.m in Sources */,
 				95192FBA20A94F5600C96419 /* BBLiveNetworkAgent.m in Sources */,
 				9585FC6B20A59AA20023D484 /* BBLiveRoomTopViewController.m in Sources */,
 				95D5738E20AE77F000FB7210 /* BBLiveRCloudManager.m in Sources */,
