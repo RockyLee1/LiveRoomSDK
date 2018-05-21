@@ -10,7 +10,9 @@
 #import <RongIMLib/RongIMLib.h>
 #import "BBLiveRCloudTokenRequest.h"
 
-@interface BBLiveRCloudManager ()
+@interface BBLiveRCloudManager ()<
+RCIMClientReceiveMessageDelegate
+>
 
 @property (nonatomic, strong) BBLiveRCloudTokenRequest *RCloudTokenRequest;
 
@@ -89,5 +91,16 @@
         }
     }];
 }
+
+#pragma mark - RCIMClientReceiveMessageDelegate
+
+- (void)onReceived:(RCMessage *)message left:(int)nLeft object:(id)object
+{
+    
+}
+
+#pragma mark -
+
+
 
 @end

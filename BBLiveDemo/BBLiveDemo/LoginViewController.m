@@ -9,6 +9,7 @@
 #import "LoginViewController.h"
 #import "LoginRequest.h"
 #import "UserModel.h"
+#import "BBLive.h"
 
 @interface LoginViewController ()
 
@@ -39,7 +40,6 @@
     request.password = password;
     
     [request startRequestWithCompleteBlockWithSuccess:^(__kindof BBLiveBaseRequest *request) {
-        
         
     } failure:^(__kindof BBLiveBaseRequest *request) {
         

@@ -8,7 +8,13 @@
 
 #import <Foundation/Foundation.h>
 
+@protocol BBLiveRCloudManagerMessageDelegate <NSObject>
+
+@end
+
 @interface BBLiveRCloudManager : NSObject
+
+@property (nonatomic, weak) id <BBLiveRCloudManagerMessageDelegate>messageDelegate;
 
 + (instancetype)shareManager;
 

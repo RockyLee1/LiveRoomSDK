@@ -47,6 +47,6 @@
     self.fetchCommonParamsBlock = fetchBlock;
 }
 
-- (void)
+//- (void)
 
 @end

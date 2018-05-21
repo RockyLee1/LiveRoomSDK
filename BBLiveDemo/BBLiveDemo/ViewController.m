@@ -10,6 +10,7 @@
 
 #import "BBLiveSDK.h"
 #import "BBLivingListRequest.h"
+#import "BBLiveRCloudManager.h"
 
 #import "UserModel.h"
 #import <SDWebImage/UIImageView+WebCache.h>
@@ -73,6 +74,15 @@ UICollectionViewDataSource
     UIViewController *room = [BBLiveRoomHandle liveRoomWithRoomURL:nil];
     
     [self presentViewController:room animated:YES completion:^{
+        
+    }];
+}
+
+- (IBAction)connectRCloud:(id)sender
+{
+    [[BBLiveRCloudManager shareManager] connectRCloudWithSuccessBlock:^(NSString *userId) {
+        
+    } failureBlock:^{
         
     }];
 }

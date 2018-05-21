@@ -50,9 +50,7 @@
 {
     [super viewDidLoad];
     
-    
     [self setupUI];
-    
     [self enterLiveUserRoom];
 }
 
