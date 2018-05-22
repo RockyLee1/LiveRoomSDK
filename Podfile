@@ -40,7 +40,7 @@ target 'BBLiveSDK' do
    pod 'SDWebImage', '~> 4.3.3'
    pod 'Masonry', '~> 1.1.0'
    pod 'libextobjc/EXTScope', '~> 0.4.1'
-
+   pod 'YYText', '~> 1.0.7'
 
    
 #   真机
