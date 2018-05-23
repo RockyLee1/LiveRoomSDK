@@ -40,7 +40,8 @@ typedef NS_ENUM(NSInteger, BBLiveRoomMessageType) {
 
 - (void)liveRoomEnterCompleteWithDetailInfoModel:(BBLiveRoomDetailInfoModel *)detailInfoModel;
 - (void)liveRoomAudienceListRequestCompleteWithAudienceList:(NSArray <__kindof BBLiveAudienceModel *>*)audienceList;
-//- (void)liveRoom
+- (void)liveRoomLiveMessageWithMessageType:(BBLiveRoomMessageType)messageType
+                                messageDic:(NSDictionary *)messageDic;
 @end
 
 @interface BBLiveUserRoom : NSObject

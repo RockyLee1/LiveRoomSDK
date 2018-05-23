@@ -66,6 +66,12 @@
 		95D5739220AE819300FB7210 /* BBLive.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D5739020AE819300FB7210 /* BBLive.m */; };
 		95D5739820B2B60500FB7210 /* BBLiveUserLeaveRoomRequest.h in Headers */ = {isa = PBXBuildFile; fileRef = 95D5739620B2B60500FB7210 /* BBLiveUserLeaveRoomRequest.h */; };
 		95D5739920B2B60500FB7210 /* BBLiveUserLeaveRoomRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D5739720B2B60500FB7210 /* BBLiveUserLeaveRoomRequest.m */; };
+		95D5739F20B3C27C00FB7210 /* BBLiveRoomMessageViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 95D5739C20B3C27C00FB7210 /* BBLiveRoomMessageViewController.h */; };
+		95D573A020B3C27C00FB7210 /* BBLiveRoomMessageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D5739D20B3C27C00FB7210 /* BBLiveRoomMessageViewController.m */; };
+		95D573A220B3D19A00FB7210 /* BBLiveRoomMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95D5739E20B3C27C00FB7210 /* BBLiveRoomMessageViewController.xib */; };
+		95D573A620B3E7CD00FB7210 /* BBLiveRoomMessageTableViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 95D573A320B3E7CD00FB7210 /* BBLiveRoomMessageTableViewCell.h */; };
+		95D573A720B3E7CD00FB7210 /* BBLiveRoomMessageTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 95D573A420B3E7CD00FB7210 /* BBLiveRoomMessageTableViewCell.m */; };
+		95D573A820B3E7CD00FB7210 /* BBLiveRoomMessageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 95D573A520B3E7CD00FB7210 /* BBLiveRoomMessageTableViewCell.xib */; };
 		A73FDEA9D4EA510081B2A421 /* libPods-BBLiveSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AFEEAC81DADEBFA390EBE45 /* libPods-BBLiveSDK.a */; };
 /* End PBXBuildFile section */
 
@@ -143,6 +149,12 @@
 		95D5739020AE819300FB7210 /* BBLive.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLive.m; sourceTree = "<group>"; };
 		95D5739620B2B60500FB7210 /* BBLiveUserLeaveRoomRequest.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBLiveUserLeaveRoomRequest.h; sourceTree = "<group>"; };
 		95D5739720B2B60500FB7210 /* BBLiveUserLeaveRoomRequest.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLiveUserLeaveRoomRequest.m; sourceTree = "<group>"; };
+		95D5739C20B3C27C00FB7210 /* BBLiveRoomMessageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBLiveRoomMessageViewController.h; sourceTree = "<group>"; };
+		95D5739D20B3C27C00FB7210 /* BBLiveRoomMessageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLiveRoomMessageViewController.m; sourceTree = "<group>"; };
+		95D5739E20B3C27C00FB7210 /* BBLiveRoomMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBLiveRoomMessageViewController.xib; sourceTree = "<group>"; };
+		95D573A320B3E7CD00FB7210 /* BBLiveRoomMessageTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BBLiveRoomMessageTableViewCell.h; sourceTree = "<group>"; };
+		95D573A420B3E7CD00FB7210 /* BBLiveRoomMessageTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BBLiveRoomMessageTableViewCell.m; sourceTree = "<group>"; };
+		95D573A520B3E7CD00FB7210 /* BBLiveRoomMessageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BBLiveRoomMessageTableViewCell.xib; sourceTree = "<group>"; };
 		9AFEEAC81DADEBFA390EBE45 /* libPods-BBLiveSDK.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BBLiveSDK.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D043A82A328145BE61A1B115 /* Pods-BBLiveSDK.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BBLiveSDK.release.xcconfig"; path = "../Pods/Target Support Files/Pods-BBLiveSDK/Pods-BBLiveSDK.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -322,6 +334,12 @@
 				9585FCC820A91F920023D484 /* BBLiveRoomBottomViewController.h */,
 				9585FCC920A91F920023D484 /* BBLiveRoomBottomViewController.m */,
 				9585FCCA20A91F920023D484 /* BBLiveRoomBottomViewController.xib */,
+				95D5739C20B3C27C00FB7210 /* BBLiveRoomMessageViewController.h */,
+				95D5739D20B3C27C00FB7210 /* BBLiveRoomMessageViewController.m */,
+				95D5739E20B3C27C00FB7210 /* BBLiveRoomMessageViewController.xib */,
+				95D573A320B3E7CD00FB7210 /* BBLiveRoomMessageTableViewCell.h */,
+				95D573A420B3E7CD00FB7210 /* BBLiveRoomMessageTableViewCell.m */,
+				95D573A520B3E7CD00FB7210 /* BBLiveRoomMessageTableViewCell.xib */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -352,6 +370,7 @@
 				954354E520AD1BFB00774A04 /* BBLivePlayer.h in Headers */,
 				9585FCCB20A91F920023D484 /* BBLiveRoomBottomViewController.h in Headers */,
 				959F099120AC01B000387069 /* BBLiveListRoomInfoModel.h in Headers */,
+				95D5739F20B3C27C00FB7210 /* BBLiveRoomMessageViewController.h in Headers */,
 				954354F220AD758100774A04 /* BBLiveRoomAudienceListRequest.h in Headers */,
 				95192FDA20AABF8400C96419 /* BBLiveBaseRequest+Private.h in Headers */,
 				954354E120AD10DA00774A04 /* UIImage+LoadSDKResource.h in Headers */,
@@ -367,6 +386,7 @@
 				954354F620AD76FE00774A04 /* BBLiveAudienceModel.h in Headers */,
 				95D5738920AE769B00FB7210 /* BBLiveRCloudTokenRequest.h in Headers */,
 				95D5739120AE819300FB7210 /* BBLive.h in Headers */,
+				95D573A620B3E7CD00FB7210 /* BBLiveRoomMessageTableViewCell.h in Headers */,
 				95192FD120AAAA5E00C96419 /* BBLiveBaseRequest+Common.h in Headers */,
 				95D5739820B2B60500FB7210 /* BBLiveUserLeaveRoomRequest.h in Headers */,
 				95D5738D20AE77F000FB7210 /* BBLiveRCloudManager.h in Headers */,
@@ -463,6 +483,7 @@
 				954354D220AC38AE00774A04 /* BBLiveRoomBottomViewController.xib in Resources */,
 				954354D120AC38A900774A04 /* BBLiveRoomTopViewController.xib in Resources */,
 				954354D020AC38A000774A04 /* BBLiveRoomViewController.xib in Resources */,
+				95D573A220B3D19A00FB7210 /* BBLiveRoomMessageViewController.xib in Resources */,
 				954354CE20AC28AF00774A04 /* Resource.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -471,6 +492,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				95D573A820B3E7CD00FB7210 /* BBLiveRoomMessageTableViewCell.xib in Resources */,
 				954354DD20AC442600774A04 /* BBLiveSDKResource.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -536,9 +558,11 @@
 				95192FD220AAAA5E00C96419 /* BBLiveBaseRequest+Common.m in Sources */,
 				9585FCCC20A91F920023D484 /* BBLiveRoomBottomViewController.m in Sources */,
 				954354E620AD1BFB00774A04 /* BBLivePlayer.m in Sources */,
+				95D573A720B3E7CD00FB7210 /* BBLiveRoomMessageTableViewCell.m in Sources */,
 				95192FB620A9456E00C96419 /* BBLiveBaseRequest.m in Sources */,
 				95192FD720AAAECE00C96419 /* NSString+BBLiveSDKTools.m in Sources */,
 				958BED3B20A16D7700508ECB /* BBLiveRoomHandle.m in Sources */,
+				95D573A020B3C27C00FB7210 /* BBLiveRoomMessageViewController.m in Sources */,
 				95192FCE20AAA4BA00C96419 /* BBLiveManager.m in Sources */,
 				959F099220AC01B000387069 /* BBLiveListRoomInfoModel.m in Sources */,
 				954354F320AD758100774A04 /* BBLiveRoomAudienceListRequest.m in Sources */,

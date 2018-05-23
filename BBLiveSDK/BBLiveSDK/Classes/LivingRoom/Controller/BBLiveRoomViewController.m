@@ -10,6 +10,7 @@
 
 #import "BBLiveRoomTopViewController.h"
 #import "BBLiveRoomBottomViewController.h"
+#import "BBLiveRoomMessageViewController.h"
 
 #import <Masonry/Masonry.h>
 #import <libextobjc/EXTScope.h>
@@ -24,8 +25,10 @@
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *topContentView;
 @property (weak, nonatomic) IBOutlet UIView *bottomContentView;
+@property (weak, nonatomic) IBOutlet UIView *messageTableViewContentView;
 
 @property (strong, nonatomic) BBLiveRoomTopViewController *topViewController;
+@property (strong, nonatomic) BBLiveRoomMessageViewController *messageTableViewController;
 @property (strong, nonatomic) BBLiveRoomBottomViewController *bottomViewController;
 
 // DATA
@@ -80,6 +83,11 @@
         make.edges.equalTo(@0);
     }];
     
+    [self.messageTableViewContentView addSubview:self.messageTableViewController.view];
+    [self.messageTableViewController.view mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(@0);
+    }];
+    
     [self.scrollView setContentOffset:CGPointMake(CGRectGetWidth([UIScreen mainScreen].bounds), 0) animated:NO];
 }
 
@@ -101,6 +109,15 @@
     return _bottomViewController;
 }
 
+- (BBLiveRoomMessageViewController *)messageTableViewController
+{
+    if (!_messageTableViewController) {
+        _messageTableViewController = [[BBLiveRoomMessageViewController alloc] initWithNibName:@"BBLiveSDKResource.bundle/BBLiveRoomMessageViewController" bundle:nil];
+    }
+    
+    return _messageTableViewController;
+}
+
 #pragma mark - BBLiveUserRoomDelegate
 
 - (void)liveRoomEnterCompleteWithDetailInfoModel:(BBLiveRoomDetailInfoModel *)detailInfoModel
@@ -111,6 +128,19 @@
 - (void)liveRoomAudienceListRequestCompleteWithAudienceList:(NSArray<__kindof BBLiveAudienceModel *> *)audienceList
 {
     [self.topViewController refreshAudienceCollectionViewWithList:self.liveUserRoom.audienceList];
+}
+
+- (void)liveRoomLiveMessageWithMessageType:(BBLiveRoomMessageType)messageType
+                                messageDic:(NSDictionary *)messageDic
+{
+    NSString *string = [NSString stringWithFormat:@"消息Type(%zd),nickname = (%@)",messageType,messageDic[@"nickname"]];
+    
+    
+    [self.messageTableViewController performSelector:@selector(addMessageWithMessage:) withObject:string afterDelay:0.3];
+    
+//    for (int i = 0; i<10; i++) {
+//        [self.messageTableViewController addMessageWithMessage:string];
+//    }
 }
 
 - (void)didReceiveMemoryWarning {

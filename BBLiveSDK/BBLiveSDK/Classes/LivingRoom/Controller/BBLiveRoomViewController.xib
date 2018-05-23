@@ -12,6 +12,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BBLiveRoomViewController">
             <connections>
                 <outlet property="bottomContentView" destination="XtK-7b-JmR" id="dzj-xV-PdJ"/>
+                <outlet property="messageTableViewContentView" destination="4Mg-jh-WSx" id="OGY-4u-e8s"/>
                 <outlet property="playerContentView" destination="qWp-KG-Jml" id="k5b-eW-ees"/>
                 <outlet property="scrollView" destination="ZWA-DB-U3f" id="GlH-pB-7Zr"/>
                 <outlet property="topContentView" destination="7ev-VL-wGL" id="pcf-Kb-RaW"/>
@@ -47,6 +48,14 @@
                                                 <constraint firstAttribute="height" constant="97" id="zRm-wA-IZg"/>
                                             </constraints>
                                         </view>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Mg-jh-WSx">
+                                            <rect key="frame" x="0.0" y="269" width="300" height="300"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="300" id="6BE-cj-6pd"/>
+                                                <constraint firstAttribute="width" constant="300" id="9XQ-Fm-T64"/>
+                                            </constraints>
+                                        </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XtK-7b-JmR">
                                             <rect key="frame" x="0.0" y="601" width="375" height="66"/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -57,6 +66,8 @@
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <constraints>
+                                        <constraint firstItem="XtK-7b-JmR" firstAttribute="top" secondItem="4Mg-jh-WSx" secondAttribute="bottom" constant="32" id="LBr-HZ-I89"/>
+                                        <constraint firstItem="4Mg-jh-WSx" firstAttribute="leading" secondItem="Iku-rI-1Rq" secondAttribute="leading" id="Lud-YH-xRl"/>
                                         <constraint firstAttribute="trailing" secondItem="XtK-7b-JmR" secondAttribute="trailing" id="QdG-vY-gGk"/>
                                         <constraint firstItem="XtK-7b-JmR" firstAttribute="leading" secondItem="Iku-rI-1Rq" secondAttribute="leading" id="gQ6-mb-9G8"/>
                                         <constraint firstAttribute="trailing" secondItem="7ev-VL-wGL" secondAttribute="trailing" id="h9w-5l-IaL"/>

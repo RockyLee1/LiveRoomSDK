@@ -127,6 +127,13 @@
 {
     BBLiveRoomMessageType type = [messageType integerValue];
     
+    dispatch_async(dispatch_get_main_queue(), ^{
+        if (self.delegate && [self.delegate respondsToSelector:@selector(liveRoomLiveMessageWithMessageType:messageDic:)]) {
+            [self.delegate liveRoomLiveMessageWithMessageType:type
+                                                   messageDic:messageDic];
+        }
+    });
+    
     switch (type) {
         case BBLiveRoomMessageTypeChatRoomNormalMsg:
             
