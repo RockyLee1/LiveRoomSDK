@@ -6,7 +6,10 @@
 //  Copyright © 2018年 linzuhan. All rights reserved.
 //
 
-/* 封装了进房逻辑和融云的进房逻辑，(后期可能会加上其他和房间业务相关的逻辑) */
+/*!
+ 用户房间
+ 封装了进房逻辑和融云的进房逻辑，(后期可能会加上其他和房间业务相关的逻辑)
+ */
 
 #import <Foundation/Foundation.h>
 
@@ -32,7 +35,9 @@ typedef NS_ENUM(NSInteger, BBLiveRoomMessageType) {
     BBLiveRoomMessageTypeRanking                        = 110,  // 热榜
     BBLiveRoomMessageTypeTrack                          = 111,  // 跑道消息
     BBLiveRoomMessageTypeAttention                      = 112,  // 关注主播消息
-    BBLiveRoomMessageTypeFrontOrBack                    = 114   // 主播切换前后台
+    BBLiveRoomMessageTypeFrontOrBack                    = 114,  // 主播切换前后台
+    
+    BBLiveRoomMessageTypeLiveRoomClose                  = 122   // 直播间关闭
 
 };
 

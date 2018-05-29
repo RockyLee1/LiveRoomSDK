@@ -61,7 +61,7 @@ UITableViewDataSource
 
 - (void)addMessageWithMessage:(NSString *)msg
 {
-    if (!self.isTableViewBusying && self.isRoomBottom) {
+    if (!self.isTableViewBusying) {
         self.isTableViewBusying = YES;
         
         [self insertRowsWithMsg:msg
@@ -83,18 +83,19 @@ UITableViewDataSource
 - (void)insertRowsWithMsg:(NSString *)msg
             completeBlock:(void (^)(void))completeBlock
 {
-//    [self.list addObject:msg];
-//
-//    [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:self.list.count - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationLeft];
-//    if (self.isRoomBottom) {
-//        [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.list.count - 1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
-//    }
-//
-//    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-//        if (completeBlock) {
-//            completeBlock();
-//        }
-//    });
+    [self.messageList addObject:msg];
+
+    [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:self.messageList.count - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationLeft];
+        
+    if (self.isRoomBottom) {
+        [self.tableView scrollToRowAtIndexPath:[NSIndexPath indexPathForRow:self.messageList.count - 1 inSection:0] atScrollPosition:UITableViewScrollPositionBottom animated:YES];
+    }
+
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.8 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        if (completeBlock) {
+            completeBlock();
+        }
+    });
     
 //    [self.tableView performBatchUpdates:^{
 //        [self.tableView insertRowsAtIndexPaths:@[[NSIndexPath indexPathForRow:self.list.count - 1 inSection:0]] withRowAnimation:UITableViewRowAnimationLeft];
@@ -137,11 +138,6 @@ UITableViewDataSource
 
 #pragma mark - UIScrollViewDelegate
 
-//- (void)scrollViewDidScroll:(UIScrollView *)scrollView
-//{
-//
-//}
-//
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     self.isDraging = YES;
@@ -152,7 +148,8 @@ UITableViewDataSource
     self.isDraging = NO;
     
     NSArray *visibleIndexPaths = [self.tableView indexPathsForVisibleRows];
-    NSIndexPath *lastIndexPath = [NSIndexPath indexPathForRow:self.messageList.count - 1 inSection:0];
+    NSInteger numberRows = [self.tableView numberOfRowsInSection:0];
+    NSIndexPath *lastIndexPath = [NSIndexPath indexPathForRow:numberRows - 1 inSection:0];
     if ([visibleIndexPaths containsObject:lastIndexPath]) {
         self.isRoomBottom = YES;
     } else {
@@ -173,7 +170,8 @@ UITableViewDataSource
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     NSArray *visibleIndexPaths = [self.tableView indexPathsForVisibleRows];
-    NSIndexPath *lastIndexPath = [NSIndexPath indexPathForRow:self.messageList.count - 1 inSection:0];
+    NSInteger numberRows = [self.tableView numberOfRowsInSection:0];
+    NSIndexPath *lastIndexPath = [NSIndexPath indexPathForRow:numberRows - 1 inSection:0];
     if ([visibleIndexPaths containsObject:lastIndexPath]) {
         self.isRoomBottom = YES;
     } else {

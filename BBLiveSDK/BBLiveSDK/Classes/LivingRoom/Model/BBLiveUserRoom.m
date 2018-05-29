@@ -179,6 +179,9 @@
         case BBLiveRoomMessageTypeFrontOrBack:
             
             break;
+        case BBLiveRoomMessageTypeLiveRoomClose:
+            
+            break;
         default:
             break;
     }
