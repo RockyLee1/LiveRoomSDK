@@ -15,4 +15,14 @@
     return @"live/getauthen";
 }
 
+- (void)parseResponseWithResponseObject:(NSDictionary *)responseDic
+{
+    NSDictionary *dataDic = responseDic[@"data"];
+    if (dataDic && [dataDic isKindOfClass:[NSDictionary class]]) {
+        self.auditStatus = [dataDic[@"auditStatus"] integerValue];
+        self.cause = dataDic[@"cause"];
+        self.broker = [dataDic[@"broker"] integerValue];
+    }
+}
+
 @end

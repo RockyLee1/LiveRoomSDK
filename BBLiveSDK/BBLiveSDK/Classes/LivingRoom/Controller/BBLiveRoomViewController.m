@@ -91,6 +91,8 @@
     [self.scrollView setContentOffset:CGPointMake(CGRectGetWidth([UIScreen mainScreen].bounds), 0) animated:NO];
 }
 
+#pragma mark - Lazy Load
+
 - (BBLiveRoomTopViewController *)topViewController
 {
     if (!_topViewController) {

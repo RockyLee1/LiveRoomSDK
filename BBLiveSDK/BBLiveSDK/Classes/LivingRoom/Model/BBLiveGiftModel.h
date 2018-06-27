@@ -8,14 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
-typedef NS_ENUM(NSInteger, BBLiveGiftLeftMarkType) {
-    BBLiveGiftLeftMarkTypeUnknown = 0,
-    BBLiveGiftLeftMarkType,
-    BBLiveGiftLeftMarkType
-    BBLiveGiftLeftMarkType
-    BBLiveGiftLeftMarkType
-    BBLiveGiftLeftMarkType
-};
+//typedef NS_ENUM(NSInteger, BBLiveGiftLeftMarkType) {
+//    BBLiveGiftLeftMarkTypeUnknown = 0,
+//    BBLiveGiftLeftMarkType,
+//    BBLiveGiftLeftMarkType
+//    BBLiveGiftLeftMarkType
+//    BBLiveGiftLeftMarkType
+//    BBLiveGiftLeftMarkType
+//};
 
 @interface BBLiveGiftModel : NSObject
 

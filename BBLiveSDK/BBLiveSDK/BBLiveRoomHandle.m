@@ -9,6 +9,8 @@
 #import "BBLiveRoomHandle.h"
 #import "BBLiveRoomViewController.h"
 
+#import "BBLiveAnchorRoomViewController.h"
+
 @implementation BBLiveRoomHandle
 
 + (UIViewController *)liveRoomWithRoomURL:(NSString *)url
@@ -25,6 +27,13 @@
     liveRoomVC.roomInfoModel = roomInfo;
     
     return liveRoomVC;
+}
+
++ (UIViewController *)openLive
+{
+    BBLiveAnchorRoomViewController *anchorRoomVC = [[BBLiveAnchorRoomViewController alloc] initWithNibName:@"BBLiveSDKResource.bundle/BBLiveAnchorRoomViewController" bundle:nil];
+    
+    return anchorRoomVC;
 }
 
 

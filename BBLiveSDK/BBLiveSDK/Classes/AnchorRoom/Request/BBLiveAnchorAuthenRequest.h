@@ -14,4 +14,8 @@
 
 @interface BBLiveAnchorAuthenRequest : BBLiveBaseRequest
 
+@property (nonatomic, assign) NSInteger auditStatus;
+@property (nonatomic, copy) NSString *cause;
+@property (nonatomic, assign) NSInteger broker;
+
 @end

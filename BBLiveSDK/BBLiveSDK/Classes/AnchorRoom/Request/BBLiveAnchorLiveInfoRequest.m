@@ -8,11 +8,27 @@
 
 #import "BBLiveAnchorLiveInfoRequest.h"
 
+@interface BBLiveAnchorLiveInfoRequest ()
+
+@property (nonatomic, copy) NSString *pushUrl;
+
+@end
+
 @implementation BBLiveAnchorLiveInfoRequest
 
 - (NSString *)requestPath
 {
     return @"live/liveinfo";
+}
+
+- (NSDictionary *)requestCustomParameters
+{
+    return @{@"slogan":_liveTitle ?: @""};
+}
+
+- (void)parseResponseWithResponseObject:(NSDictionary *)responseDic
+{
+    self.pushUrl = responseDic[@"data"][@"pushUrl"];
 }
 
 @end

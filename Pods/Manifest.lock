@@ -24,6 +24,9 @@ PODS:
   - PLPlayerKit (3.3.0):
     - PLPlayerKit/iphoneos (= 3.3.0)
   - PLPlayerKit/iphoneos (3.3.0)
+  - PLRTCStreamingKit_Gray (1.0.2):
+    - PLRTCStreamingKit_Gray/iphoneos (= 1.0.2)
+  - PLRTCStreamingKit_Gray/iphoneos (1.0.2)
   - RongCloudIM/IMLib (2.8.31)
   - SDWebImage (4.3.3):
     - SDWebImage/Core (= 4.3.3)
@@ -38,6 +41,7 @@ DEPENDENCIES:
   - Masonry (~> 1.1.0)
   - MJExtension (~> 3.0.13)
   - PLPlayerKit (~> 3.3.0)
+  - PLRTCStreamingKit_Gray (~> 1.0.2)
   - RongCloudIM/IMLib (~> 2.8.3)
   - SDWebImage (~> 4.3.3)
   - YYText (~> 1.0.7)
@@ -49,11 +53,12 @@ SPEC CHECKSUMS:
   Masonry: 678fab65091a9290e40e2832a55e7ab731aad201
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   PLPlayerKit: bf3dcb35b9736c73c20a9a927f131c6bf18614e5
+  PLRTCStreamingKit_Gray: f6e8b85fae87a42c957d4cd578b8416413c25c70
   RongCloudIM: dbbf0ff365f1627324cfead498136d75c99cbeac
   SDWebImage: de4d90b5bff3571eae7bd16202b1f43135409fa5
   UICKeyChainStore: 239558492fa260531a0774cfc611ea83a6eaff3a
   YYText: 5c461d709e24d55a182d1441c41dc639a18a4849
 
-PODFILE CHECKSUM: c535e8c4325f95e34764b05231b8b637a4687dc9
+PODFILE CHECKSUM: b61008b404e797dfda9f189153268e90a92146d2
 
 COCOAPODS: 1.4.0

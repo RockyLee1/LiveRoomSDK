@@ -10,6 +10,8 @@
 
 #import "BBLiveRCloudManager.h"
 
+#import <PLRTCStreamingKit/PLRTCStreamingKit.h>
+
 @implementation BBLive
 
 + (void)initBBLiveSDK
@@ -19,6 +21,8 @@
     } failureBlock:^{
         
     }];
+    
+    [PLStreamingEnv initEnv];
 }
 
 @end

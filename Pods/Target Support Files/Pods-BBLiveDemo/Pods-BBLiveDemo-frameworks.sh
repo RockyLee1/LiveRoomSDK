@@ -135,9 +135,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${PODS_ROOT}/PLPlayerKit/Pod/Library/PLPlayerKit.framework"
+  install_framework "${PODS_ROOT}/PLRTCStreamingKit_Gray/Pod/Library/PLRTCStreamingKit.framework"
+  install_framework "${PODS_ROOT}/PLRTCStreamingKit_Gray/Pod/Library/HappyDNS.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${PODS_ROOT}/PLPlayerKit/Pod/Library/PLPlayerKit.framework"
+  install_framework "${PODS_ROOT}/PLRTCStreamingKit_Gray/Pod/Library/PLRTCStreamingKit.framework"
+  install_framework "${PODS_ROOT}/PLRTCStreamingKit_Gray/Pod/Library/HappyDNS.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
   wait

@@ -13,4 +13,8 @@
 
 @interface BBLiveAnchorLiveInfoRequest : BBLiveBaseRequest
 
+@property (nonatomic, copy) NSString *liveTitle;
+
+@property (nonatomic, copy, readonly) NSString *pushUrl;
+
 @end

@@ -80,13 +80,26 @@ UICollectionViewDataSource
 
 - (IBAction)connectRCloud:(id)sender
 {
-    [[BBLiveRCloudManager shareManager] connectRCloudWithSuccessBlock:^(NSString *userId) {
-        
-    } failureBlock:^{
-        
-    }];
+//    [[BBLiveRCloudManager shareManager] connectRCloudWithSuccessBlock:^(NSString *userId) {
+//        
+//    } failureBlock:^{
+//        
+//    }];
+    
+    [BBLive initBBLiveSDK];
 }
 
+- (IBAction)openLiveBtnClicked:(UIButton *)sender
+{
+    UIViewController *vc = [BBLiveRoomHandle openLive];
+    
+    [self presentViewController:vc
+                       animated:YES
+                     completion:^{
+                         
+                     }];
+}
+    
 #pragma mark -
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section

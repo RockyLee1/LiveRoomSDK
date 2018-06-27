@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BBLiveAnchorPrepareViewController">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rwm-8d-hWf">
+                    <rect key="frame" x="338" y="29" width="25" height="25"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="25" id="FFu-aa-Twb"/>
+                        <constraint firstAttribute="width" constant="25" id="dcf-LK-DeA"/>
+                    </constraints>
+                    <state key="normal" image="kaibo_close"/>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fJ5-FC-Kcg">
+                    <rect key="frame" x="12" y="68" width="351" height="170"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RRE-bH-DkI">
+                            <rect key="frame" x="12" y="12" width="110" height="110"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="封面" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AxY-kK-WZL">
+                                    <rect key="frame" x="39" y="76" width="31" height="18"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                    <color key="textColor" red="0.70588235294117652" green="0.69411764705882351" blue="0.6705882352941176" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kaibo_none_cover" translatesAutoresizingMaskIntoConstraints="NO" id="ka8-lT-zGK">
+                                    <rect key="frame" x="37" y="32" width="36" height="36"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </imageView>
+                            </subviews>
+                            <color key="backgroundColor" cocoaTouchSystemColor="scrollViewTexturedBackgroundColor"/>
+                        </view>
+                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cW0-aH-OlL">
+                            <rect key="frame" x="12" y="134" width="327" height="1"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="呼唤小伙伴来看" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jdi-39-zYM">
+                            <rect key="frame" x="12" y="144" width="93" height="16"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DeZ-rd-I9i">
+                            <rect key="frame" x="128" y="141" width="20" height="22"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="kaibo_pengyouquan_normal"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8M-hg-4sS">
+                            <rect key="frame" x="164" y="141" width="20" height="22"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="kaibo_weixin_normal"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="76B-ab-wyh">
+                            <rect key="frame" x="204" y="141" width="20" height="22"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="kaibo_qq_normal"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VT9-WO-b0e">
+                            <rect key="frame" x="246" y="141" width="20" height="22"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <state key="normal" image="kaibo_kongjian_normal"/>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="170" id="3dd-MD-pSt"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qJv-Rw-dEw">
+                    <rect key="frame" x="12" y="460" width="351" height="207"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fzi-v2-Qkg">
+                            <rect key="frame" x="49" y="72" width="253" height="40"/>
+                            <color key="backgroundColor" red="0.96862745098039216" green="0.23137254901960785" blue="0.33725490196078434" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="40" id="7wd-Vx-v5U"/>
+                                <constraint firstAttribute="width" constant="253" id="WmT-Cv-lnk"/>
+                            </constraints>
+                            <state key="normal" title="开启直播"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xll-ZL-Nrv">
+                            <rect key="frame" x="64" y="40" width="53" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="53" id="USZ-Ny-ulN"/>
+                                <constraint firstAttribute="height" constant="22" id="oY4-Wt-bVG"/>
+                            </constraints>
+                            <state key="normal" image="kaibo_beauty"/>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H2a-zf-RLZ">
+                            <rect key="frame" x="187" y="40" width="100" height="22"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="100" id="FjD-ra-bBb"/>
+                                <constraint firstAttribute="height" constant="22" id="hTB-LS-HSg"/>
+                            </constraints>
+                            <state key="normal" image="kaibo_shexiangtouqiehuan"/>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cn4-zs-uOp">
+                            <rect key="frame" x="65" y="120" width="221" height="12"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="221" id="2hd-V8-4Qv"/>
+                                <constraint firstAttribute="height" constant="12" id="I6r-S5-tNZ"/>
+                            </constraints>
+                            <attributedString key="attributedText">
+                                <fragment content="开播默认同意遵守">
+                                    <attributes>
+                                        <color key="NSColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                    </attributes>
+                                </fragment>
+                                <fragment content="《奇乐直播管理条例》">
+                                    <attributes>
+                                        <color key="NSColor" red="0.97254901960784312" green="0.26666666666666666" blue="0.38039215686274508" alpha="0.82633692781690138" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <font key="NSFont" size="12" name=".PingFangSC-Regular"/>
+                                    </attributes>
+                                </fragment>
+                            </attributedString>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="Fzi-v2-Qkg" firstAttribute="top" secondItem="H2a-zf-RLZ" secondAttribute="bottom" constant="10" id="41R-Pm-PaL"/>
+                        <constraint firstItem="Xll-ZL-Nrv" firstAttribute="leading" secondItem="Fzi-v2-Qkg" secondAttribute="leading" constant="15" id="9g0-lS-Y0u"/>
+                        <constraint firstAttribute="bottom" secondItem="Cn4-zs-uOp" secondAttribute="bottom" constant="75" id="Mll-Rd-Yc5"/>
+                        <constraint firstItem="Cn4-zs-uOp" firstAttribute="centerX" secondItem="qJv-Rw-dEw" secondAttribute="centerX" id="NbT-vt-rJm"/>
+                        <constraint firstItem="Fzi-v2-Qkg" firstAttribute="top" secondItem="Xll-ZL-Nrv" secondAttribute="bottom" constant="10" id="dhE-ZD-3Qs"/>
+                        <constraint firstItem="Fzi-v2-Qkg" firstAttribute="centerX" secondItem="qJv-Rw-dEw" secondAttribute="centerX" id="hjj-i8-9L4"/>
+                        <constraint firstItem="Cn4-zs-uOp" firstAttribute="top" secondItem="Fzi-v2-Qkg" secondAttribute="bottom" constant="8" id="oUx-fW-5Kv"/>
+                        <constraint firstAttribute="height" constant="207" id="xrm-ea-Dac"/>
+                        <constraint firstItem="H2a-zf-RLZ" firstAttribute="trailing" secondItem="Fzi-v2-Qkg" secondAttribute="trailing" constant="-15" id="z6b-cx-9GQ"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="TmY-oI-x67" firstAttribute="trailing" secondItem="qJv-Rw-dEw" secondAttribute="trailing" constant="12" id="3fC-I8-0oE"/>
+                <constraint firstItem="qJv-Rw-dEw" firstAttribute="leading" secondItem="TmY-oI-x67" secondAttribute="leading" constant="12" id="8yv-wY-uLJ"/>
+                <constraint firstItem="TmY-oI-x67" firstAttribute="trailing" secondItem="fJ5-FC-Kcg" secondAttribute="trailing" constant="12" id="cxe-zs-BRC"/>
+                <constraint firstItem="fJ5-FC-Kcg" firstAttribute="top" secondItem="Rwm-8d-hWf" secondAttribute="bottom" constant="14" id="czI-6A-Hi0"/>
+                <constraint firstItem="TmY-oI-x67" firstAttribute="trailing" secondItem="Rwm-8d-hWf" secondAttribute="trailing" constant="12" id="lLM-mU-Yk8"/>
+                <constraint firstItem="Rwm-8d-hWf" firstAttribute="top" secondItem="TmY-oI-x67" secondAttribute="top" constant="9" id="mH0-fE-a2T"/>
+                <constraint firstItem="qJv-Rw-dEw" firstAttribute="bottom" secondItem="TmY-oI-x67" secondAttribute="bottom" id="neB-cE-CcS"/>
+                <constraint firstItem="fJ5-FC-Kcg" firstAttribute="leading" secondItem="TmY-oI-x67" secondAttribute="leading" constant="12" id="yzs-RC-XgW"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="TmY-oI-x67"/>
+            <point key="canvasLocation" x="33.5" y="76.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="kaibo_beauty" width="53" height="16"/>
+        <image name="kaibo_close" width="18" height="18"/>
+        <image name="kaibo_kongjian_normal" width="20" height="20"/>
+        <image name="kaibo_none_cover" width="36" height="36"/>
+        <image name="kaibo_pengyouquan_normal" width="20" height="20"/>
+        <image name="kaibo_qq_normal" width="20" height="20"/>
+        <image name="kaibo_shexiangtouqiehuan" width="100" height="14"/>
+        <image name="kaibo_weixin_normal" width="20" height="20"/>
+    </resources>
+</document>

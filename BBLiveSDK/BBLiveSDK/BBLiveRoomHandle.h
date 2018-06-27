@@ -17,4 +17,7 @@
 
 + (UIViewController *)liveRoomWithListRoomInfo:(BBLiveListRoomInfoModel *)roomInfo;
 
+
++ (UIViewController *)openLive;
+
 @end
